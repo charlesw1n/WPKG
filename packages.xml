@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+	Database of packages which are ready to be assigned to workstations. Assign
+	these packages by adding them to profiles which you associate with
+	workstations.
+
+	THIS IS A SAMPLE FILE.
+
+	More individual application package examples can be found here:
+		packages/
+
+	Templates for typical use-cases can be found at:
+		packages/Templates/
+
+	For detailed documentation on the XML structure, attributes etc it's
+	recommended to have a look at the XSD schema included here:
+		xsd/
+
+	An automatically generated documentation of the XML structure is included
+	here:
+		documents/
+	Just open documents/index.html in your favorite web browser.
+
+	For help on silent installation switches please refer to the WPKG wiki:
+		<http://wpkg.org/Category:Silent_Installers>
+
+	More documentation is available on the WPKG web-page as well:
+		<http://wpkg.org/Category:Documentation>
+-->

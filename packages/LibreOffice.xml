@@ -1,0 +1,26 @@
+<packages:packages xmlns:packages="http://www.wpkg.org/packages"
+	xmlns:wpkg="http://www.wpkg.org/wpkg" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.wpkg.org/packages ../xsd/packages.xsd">
+	
+	<package
+		id="LibreOffice" 
+		name="Libre Office 4.0.1.2" 
+		revision="%version%"
+		reboot="false" 
+		priority="850">
+		
+	<depends package-id="Java7" />
+ 
+	<variable name="version" value="4.0.1.2" />
+	 
+	<check type="uninstall" condition="versiongreaterorequal" path="LibreOffice .+" value="%version%" />
+ 
+	<install cmd='msiexec /qb! /i %SOFTWARE%\LibreOffice_%version%.msi ALLUSERS=1 CREATEDESKTOPLINK=0 REGISTER_ALL_MSO_TYPES=1 ISCHECKFORPRODUCTUPDATE=0 INSTALLLOCATION="D:\Applics\LibreOffice 4\" IS1033=0 IS1036=1 UI_LANGS=fr' />
+ 
+	<upgrade include="install" />
+ 
+	<remove cmd="msiexec /qb! /uninstall {8EA569F1-97AF-4C3E-A0CB-4846C2D35A81}" />
+ 
+	</package>
+	
+</packages:packages>

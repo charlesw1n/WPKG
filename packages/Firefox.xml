@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<packages:packages
+        xmlns:packages="http://www.wpkg.org/packages" xmlns:wpkg="http://www.wpkg.org/wpkg" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.wpkg.org/packages ../xsd/packages.xsd" >
+
+<package 
+	id="Firefox"
+	name="Mozilla Firefox 19.0.2"
+	revision="%version%"
+	reboot="false"
+	priority="300">
+ 
+	<variable name="version" value="19.0.2" />
+
+ 
+ 
+	<check type="uninstall" condition="exists" path="Mozilla Firefox %version% (x86 fr)" />
+ 
+	<install cmd='"%SOFTWARE%\Firefox Setup %version%.exe" -ms' />
+	<install cmd='%ComSpec% /C if exist "%ALLUSERSPROFILE%\Bureau\Mozilla Firefox.lnk" del "%ALLUSERSPROFILE%\Bureau\VLC media player.lnk"' />
+ 
+        <upgrade include="install" />
+ 
+	<remove cmd="taskkill /F /IM Firefox.exe">
+		<exit code="0" />
+		<exit code="128" />
+		<exit code="-1073741515" />
+	</remove>
+ 
+        <!-- for 32bit and 64bit System -->
+	<remove cmd='%COMSPEC% /C if exist "%PROGRAMFILES%\Mozilla Firefox\uninstall\helper.exe" "%PROGRAMFILES%\Mozilla Firefox\uninstall\helper.exe" -ms' />
+	<remove cmd='%COMSPEC% /C if exist "%PROGRAMFILES(x86)%\Mozilla Firefox\uninstall\helper.exe" "%PROGRAMFILES(x86)%\Mozilla Firefox\uninstall\helper.exe" -ms' />
+ 
+</package>
+
+</packages:packages>

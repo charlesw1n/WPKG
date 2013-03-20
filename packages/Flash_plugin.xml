@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<packages:packages
+        xmlns:packages="http://www.wpkg.org/packages" xmlns:wpkg="http://www.wpkg.org/wpkg" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.wpkg.org/packages ../xsd/packages.xsd" >
+
+<package 
+	id="flash_plugin"
+	name="Adobe Flash Player 11 Plugin"
+	revision="%version%"
+	reboot="false"
+	priority="890">
+ 
+	<variable name="version" value="11.6.602.180" />
+	<variable name="verunin" value="11_6_602_180" />
+
+ 
+ 
+	<check type="uninstall" condition="versiongreaterorequal" path="Adobe Flash Player 11 Plugin" value="%version%" />
+ 
+	<install cmd='msiexec /i %SOFTWARE%\adobe\install_flash_player_11_plugin.msi /qn' />
+ 
+        <upgrade include="install" />
+ 
+	<remove cmd='%COMSPEC% /C if exist "C:\Windows\SysWOW64\Macromed\Flash\FlashUtil32_%verunin%_Plugin.exe" "C:\Windows\SysWOW64\Macromed\Flash\FlashUtil32_%verunin%_Plugin.exe" -maintain plugin' />
+	<remove cmd='%COMSPEC% /C if exist "C:\Windows\System32\Macromed\Flash\FlashUtil32_%verunin%_Plugin.exe" "C:\Windows\System32\Macromed\Flash\FlashUtil32_%verunin%_Plugin.exe" -maintain plugin' />
+ 
+</package>
+
+</packages:packages>

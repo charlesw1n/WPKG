@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<packages:packages
+        xmlns:packages="http://www.wpkg.org/packages" xmlns:wpkg="http://www.wpkg.org/wpkg" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.wpkg.org/packages ../xsd/packages.xsd" >
+
+<package 
+	id="OCS"
+	name="OCS Inventory NG Agent 2.0.0.20"
+	revision="%version%"
+	reboot="false"
+	priority="5">
+ 
+	<variable name="version" value="2.0.0.20" />
+ 
+	<check type="uninstall" condition="exists" path="OCS Inventory NG Agent %version%" />
+ 
+	<install cmd='%SOFTWARE%\OCS_%version%.exe' />
+ 
+        <upgrade include="install" />
+ 
+        <!-- for 32bit and 64bit System -->
+	<remove cmd='%COMSPEC% /C if exist "%PROGRAMFILES%\OCS Inventory Agent\uninst.exe" "%PROGRAMFILES%\OCS Inventory Agent\uninst.exe" /S' />
+	<remove cmd='%COMSPEC% /C if exist "%PROGRAMFILES(x86)%\OCS Inventory Agent\uninst.exe" "%PROGRAMFILES(x86)%\OCS Inventory Agent\uninst.exe" /S' />
+ 
+</package>
+
+</packages:packages>
