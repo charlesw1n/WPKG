@@ -17,7 +17,7 @@
 	<check type="uninstall" condition="exists" path="Mozilla Firefox %version% (x86 fr)" />
  
 	<install cmd='"%SOFTWARE%\Firefox Setup %version%.exe" -ms' />
-	<install cmd='%ComSpec% /C if exist "%ALLUSERSPROFILE%\Bureau\Mozilla Firefox.lnk" del "%ALLUSERSPROFILE%\Bureau\VLC media player.lnk"' />
+	<install cmd='%ComSpec% /C if exist "%ALLUSERSPROFILE%\Bureau\Mozilla Firefox.lnk" del "%ALLUSERSPROFILE%\Bureau\Mozilla Firefox.lnk"' />
  
         <upgrade include="install" />
  
