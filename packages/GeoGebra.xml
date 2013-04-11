@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<packages:packages
+        xmlns:packages="http://www.wpkg.org/packages" xmlns:wpkg="http://www.wpkg.org/wpkg" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.wpkg.org/packages ../xsd/packages.xsd" >
+
+<package 
+	id="geogebra"
+	name="GeoGebra 4.2.30.0"
+	revision="%version%.2"
+	reboot="false"
+	priority="685">
+ 
+	<variable name="version" value="4.2.30.0" />
+
+	<depends package-id="Java7" />
+ 
+	<check type="uninstall" condition="versiongreaterorequal" path="GeoGebra 4.2" value="%version%" />
+ 
+	<install cmd='msiexec /i %SOFTWARE%\geogebra\GeoGebra_%version%.msi /qn' />
+	<install cmd='%ComSpec% /C copy "%SOFTWARE%\geogebra\GeoGebra.lnk" "%ALLUSERSPROFILE%\Bureau\GeoGebra.lnk" /Y' />
+ 
+    <upgrade include="install" />
+ 
+	<remove cmd="msiexec /qb! /uninstall {D44FFF47-306C-4198-9899-832C1DAA4566}" />
+ 
+</package>
+
+</packages:packages>
