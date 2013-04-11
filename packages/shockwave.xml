@@ -1,14 +1,13 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<packages:packages
-        xmlns:packages="http://www.wpkg.org/packages" xmlns:wpkg="http://www.wpkg.org/wpkg" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.wpkg.org/packages ../xsd/packages.xsd" >
+﻿<packages:packages xmlns:packages="http://www.wpkg.org/packages"
+	xmlns:wpkg="http://www.wpkg.org/wpkg" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.wpkg.org/packages ../xsd/packages.xsd" >
 
-<package 
-	id="flash_plugin"
-	name="Adobe Shockwave Player 11.6.7.637"
-	revision="%version%"
-	reboot="false"
-	priority="880">
+	<package 
+		id="shockwave"
+		name="Adobe Shockwave Player 11.6.7.637"
+		revision="%version%"
+		reboot="false"
+		priority="880">
  
 	<variable name="version" value="11.6.7.637" />
  
@@ -21,6 +20,6 @@
 	<remove cmd='%COMSPEC% /C if exist "C:\Windows\SysWOW64\Adobe\Shockwave 11\uninstaller.exe" "C:\Windows\SysWOW64\Adobe\Shockwave 11\uninstaller.exe"' />
 	<remove cmd='%COMSPEC% /C if exist "C:\Windows\System32\Adobe\Shockwave 11\uninstaller.exe" "C:\Windows\System32\Adobe\Shockwave 11\uninstaller.exe"' />
  
-</package>
+	</package>
 
 </packages:packages>

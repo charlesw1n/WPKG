@@ -7,7 +7,7 @@
 		name="Libre Office 4.0.1.2" 
 		revision="%version%"
 		reboot="false" 
-		priority="850">
+		priority="700">
 		
 	<depends package-id="Java7" />
  

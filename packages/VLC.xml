@@ -1,17 +1,17 @@
-<packages:packages
-        xmlns:packages="http://www.wpkg.org/packages" xmlns:wpkg="http://www.wpkg.org/wpkg" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.wpkg.org/packages ../xsd/packages.xsd">
+<packages:packages xmlns:packages="http://www.wpkg.org/packages"
+	xmlns:wpkg="http://www.wpkg.org/wpkg" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.wpkg.org/packages ../xsd/packages.xsd">
 		
 	<package 
-		id='VLC'
-		name='VLC 2.0.5'
-		revision='%version%'
-		priority='40'
-		reboot='false' >
+		id="VLC"
+		name="VLC 2.0.5"
+		revision="%version%"
+		reboot="false"
+		priority="690">
  
 	<variable name="version" value="2.0.5" />
 
-	<check type='uninstall' condition='exists' path='VLC media player %version%' />
+	<check type="uninstall" condition="exists" path="VLC media player %version%" />
  
 	<install cmd='"%SOFTWARE%\vlc-%version%-win32.exe" /L=1036 /S' />
 	<install cmd='%ComSpec% /C if exist "%ALLUSERSPROFILE%\Bureau\VLC media player.lnk" del "%ALLUSERSPROFILE%\Bureau\VLC media player.lnk"' />

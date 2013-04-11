@@ -1,18 +1,15 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-<packages:packages
-        xmlns:packages="http://www.wpkg.org/packages" xmlns:wpkg="http://www.wpkg.org/wpkg" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.wpkg.org/packages ../xsd/packages.xsd" >
+﻿<packages:packages xmlns:packages="http://www.wpkg.org/packages"
+	xmlns:wpkg="http://www.wpkg.org/wpkg" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.wpkg.org/packages ../xsd/packages.xsd" >
 
-<package 
-	id="air"
-	name="Adobe AIR 3.6.0.6090"
-	revision="%version%"
-	reboot="false"
-	priority="885">
+	<package 
+		id="air"
+		name="Adobe AIR 3.6.0.6090"
+		revision="%version%"
+		reboot="false"
+		priority="885">
  
 	<variable name="version" value="3.6.0.6090" />
-
- 
  
 	<check type="uninstall" condition="versiongreaterorequal" path="Adobe AIR" value="%version%" />
  
@@ -22,6 +19,6 @@
  
 	<remove cmd="%SOFTWARE%\adobe\AdobeAIRInstaller.exe -uninstall" />
  
-</package>
+	</package>
 
 </packages:packages>
