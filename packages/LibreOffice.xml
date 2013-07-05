@@ -4,14 +4,14 @@
 	
 	<package
 		id="LibreOffice" 
-		name="Libre Office 4.0.1.2" 
-		revision="%version%"
+		name="Libre Office 4.0.3.3" 
+		revision="%version%.1"
 		reboot="false" 
 		priority="700">
 		
 	<depends package-id="Java7" />
  
-	<variable name="version" value="4.0.1.2" />
+	<variable name="version" value="4.0.3.3" />
 	 
 	<check type="uninstall" condition="versiongreaterorequal" path="LibreOffice .+" value="%version%" />
  

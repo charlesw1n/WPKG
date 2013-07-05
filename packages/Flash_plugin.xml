@@ -5,12 +5,12 @@
 	<package 
 		id="flash_plugin"
 		name="Adobe Flash Player 11 Plugin"
-		revision="%version%"
+		revision="%version%.1"
 		reboot="false"
 		priority="890">
  
-	<variable name="version" value="11.7.700.169" />
-	<variable name="verunin" value="11_7_700_169" />
+	<variable name="version" value="11.7.700.224" />
+	<variable name="verunin" value="11_7_700_224" />
 
 	<check type="uninstall" condition="versiongreaterorequal" path="Adobe Flash Player 11 Plugin" value="%version%" />
  

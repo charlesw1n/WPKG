@@ -5,11 +5,12 @@
 	<package 
 		id="flash_active_x"
 		name="Adobe Flash Player 11 ActiveX"
-		revision="%version%"
+		revision="%version%.1"
 		reboot="false"
 		priority="895">
  
-	<variable name="version" value="11.7.700.169" />
+	<variable name="version" value="11.7.700.224" />
+	
 
 	<check type="uninstall" condition="versiongreaterorequal" path="Adobe Flash Player 11 ActiveX" value="%version%" />
  
@@ -17,7 +18,7 @@
  
         <upgrade include="install" />
  
-	<remove cmd="msiexec /qb! /uninstall {9223BBDE-693D-4B5F-A1DE-C40C7D2E4C89}" />
+	<remove cmd="msiexec /qn /uninstall {9223BBDE-693D-4B5F-A1DE-C40C7D2E4C89}" />
  
 	</package>
 

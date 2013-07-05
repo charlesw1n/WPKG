@@ -4,24 +4,38 @@
 
 	<package 
 		id="Firefox"
-		name="Mozilla Firefox 19.0.2"
-		revision="%version%"
+		name="Mozilla Firefox 21.0"
+		revision="%version%.7"
 		reboot="false"
 		priority="695">
  
-	<variable name="version" value="19.0.2" />
+	<variable name="version" value="21.0" />
+	<variable name="pfiles" value="%programfiles%" architecture="x86" />
+	<variable name="pfiles" value="%ProgramFiles(x86)%" architecture="x64" />
 
 	<check type="uninstall" condition="exists" path="Mozilla Firefox %version% (x86 fr)" />
  
-	<install cmd='"%SOFTWARE%\Firefox Setup %version%.exe" -ms' />
+	<install cmd='"%SOFTWARE%\firefox\Firefox Setup %version%.exe" -ms' />
 	<install cmd='%ComSpec% /C if exist "%ALLUSERSPROFILE%\Bureau\Mozilla Firefox.lnk" del "%ALLUSERSPROFILE%\Bureau\Mozilla Firefox.lnk"' />
- 
+	
+	<install cmd='%ComSpec% /C if not exist "%pfiles%\Mozilla Firefox\browser\defaults\preferences" MD "%pfiles%\Mozilla Firefox\browser\defaults\preferences"' />
+	
+	<install cmd='%ComSpec% /C if not exist "%pfiles%\Mozilla Firefox\browser\defaults\profile\chrome" MD "%pfiles%\Mozilla Firefox\browser\defaults\profile\chrome"' />
+	
+	<install cmd='%ComSpec% /C if exist "%pfiles%\Mozilla Firefox\browser" copy /Y "%SOFTWARE%\firefox\override.ini" "%pfiles%\Mozilla Firefox\browser" ' />
+	<install cmd='%ComSpec% /C if exist "%pfiles%\Mozilla Firefox\" copy /Y "%SOFTWARE%\firefox\mozilla.cfg" "%pfiles%\Mozilla Firefox\" ' />
+	
+	<install cmd='%ComSpec% /C if exist "%pfiles%\Mozilla Firefox\browser\defaults\preferences" copy /Y "%SOFTWARE%\firefox\local-settings.js" "%pfiles%\Mozilla Firefox\browser\defaults\preferences" ' />
+	
+	<install cmd='%ComSpec% /C if exist "%pfiles%\Mozilla Firefox\" copy /Y "%SOFTWARE%\firefox\cert8.db" "%pfiles%\Mozilla Firefox" ' />
+	
+	<install cmd='%ComSpec% /C if exist "%pfiles%\Mozilla Firefox\browser\defaults\profile\chrome" copy /Y "%SOFTWARE%\firefox\userChrome.css" "%pfiles%\Mozilla Firefox\browser\defaults\profile\chrome" ' />
+	
     <upgrade include="install" />
  
     <!-- for 32bit and 64bit System -->
-	<remove cmd='%COMSPEC% /C if exist "%PROGRAMFILES%\Mozilla Firefox\uninstall\helper.exe" "%PROGRAMFILES%\Mozilla Firefox\uninstall\helper.exe" -ms' />
-	<remove cmd='%COMSPEC% /C if exist "%PROGRAMFILES(x86)%\Mozilla Firefox\uninstall\helper.exe" "%PROGRAMFILES(x86)%\Mozilla Firefox\uninstall\helper.exe" -ms' />
- 
+	<remove cmd='%COMSPEC% /C if exist "%pfiles%\Mozilla Firefox\uninstall\helper.exe" "%pfiles%\Mozilla Firefox\uninstall\helper.exe" /s' />
+	 
 	</package>
 
 </packages:packages>

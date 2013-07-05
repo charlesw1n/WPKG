@@ -1,0 +1,36 @@
+﻿<packages:packages xmlns:packages="http://www.wpkg.org/packages"
+	xmlns:wpkg="http://www.wpkg.org/wpkg" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.wpkg.org/packages ../xsd/packages.xsd" >
+
+	<package 
+		id="firefox_unattend"
+		name="Mozilla Firefox 21.0"
+		revision="%version%.4"
+		reboot="false"
+		priority="695">
+ 
+	<variable name="version" value="21.0" />
+	<variable name="pfiles" value="%programfiles%" architecture="x86" />
+	<variable name="pfiles" value="%ProgramFiles(x86)%" architecture="x64" />
+
+	<check type="uninstall" condition="exists" path="Mozilla Firefox %version% (x86 fr)" />
+ 
+	<install cmd='"%SOFTWARE%\firefox\Firefox Setup %version%.exe" -ms' />
+	<install cmd='%ComSpec% /C if exist "%ALLUSERSPROFILE%\Bureau\Mozilla Firefox.lnk" del "%ALLUSERSPROFILE%\Bureau\Mozilla Firefox.lnk"' />
+	
+	<install cmd='%ComSpec% /C if not exist "%pfiles%\Mozilla Firefox\browser\defaults\preferences" MD "%pfiles%\Mozilla Firefox\browser\defaults\preferences"' />
+	
+	<install cmd='%ComSpec% /C if exist "%pfiles%\Mozilla Firefox\browser" copy /Y "%SOFTWARE%\firefox\override.ini" "%pfiles%\Mozilla Firefox\browser" ' />
+	<install cmd='%ComSpec% /C if exist "%pfiles%\Mozilla Firefox\" copy /Y "%SOFTWARE%\firefox\mozilla.cfg" "%pfiles%\Mozilla Firefox\" ' />
+	<install cmd='%ComSpec% /C if exist "%pfiles%\Mozilla Firefox\" copy /Y "%SOFTWARE%\firefox\local-settings.js" "%pfiles%\Mozilla Firefox\browser\defaults\preferences" ' />
+	<install cmd='%ComSpec% /C if exist "%pfiles%\Mozilla Firefox\" copy /Y "%SOFTWARE%\firefox\cert8.db" "%pfiles%\Mozilla Firefox\browser\defaults" ' />
+	
+    <upgrade include="install" />
+ 
+    <!-- for 32bit and 64bit System -->
+	<remove cmd='%COMSPEC% /C if exist "%PROGRAMFILES%\Mozilla Firefox\uninstall\helper.exe" "%PROGRAMFILES%\Mozilla Firefox\uninstall\helper.exe" /s' />
+	<remove cmd='%COMSPEC% /C if exist "%PROGRAMFILES(x86)%\Mozilla Firefox\uninstall\helper.exe" "%PROGRAMFILES(x86)%\Mozilla Firefox\uninstall\helper.exe" /s' />
+ 
+	</package>
+
+</packages:packages>
