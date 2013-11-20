@@ -28,8 +28,24 @@
 		to this host.
 	-->
 	
-	<!-- <host name="3TECH_01" profile-id="techno" />
-	<host name="207.+" profile-id="base" /> -->
+	<host name="310_ANGL" profile-id="test2" />
+	
+	<!-- Administration -->
+	
+	<host name="CUISINE" profile-id="admin" />
+	<host name="PR.+" profile-id="admin" />
+	<host name="SA_.+" profile-id="admin" />
+	
+	<!-- Maths -->
+	
+	<host name="ULIS_.+" profile-id="math" />
+	<host name="105_MATHS" profile-id="math" />
+	<host name="210_MATH" profile-id="math" />
+	<host name=".+_MATHS" profile-id="math" />
+	
+	<!-- Techno -->
+	
+	<host name="PC_ALAIN.+" profile-id="techno" />
 
 	<!--
 		This specification uses a regular expression for host name matching.

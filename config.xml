@@ -168,9 +168,9 @@
 		* Command-line switch: /noreboot
 		****************************************************************************
 	-->
-	<!--
-		<param name='noreboot' value='false' />
-	-->
+	
+		<param name='noreboot' value='true' />
+	
 
 
 	<!--

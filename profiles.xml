@@ -29,9 +29,16 @@
 	<!--
 		Default set of software to be assigned to all hosts.
 	-->
-	<profile id="default">
-		<!-- <package package-id="firefox" />
-		<package package-id="thunderbird" /> -->
+	<profile id="admin">
+	  <variable name="SOFTWARE" value="\\10.134.62.2\wpkg\software" />
+		<package package-id="Java7" />
+		<package package-id="flash_active_x" />
+		<package package-id="flash_plugin" />
+		<package package-id="air" />
+		<package package-id="shockwave12" />
+		<package package-id="Firefox" />		
+		<package package-id="VLC" />
+		<package package-id="OCS" />
 	</profile>
 
 	<!--
@@ -39,12 +46,12 @@
 		The profile depends on the default profile and therefore includes
 		packages from the default profile too.
 	-->
-	<!-- <profile id="techno">
+	<profile id="techno">
 		 <depends profile-id="base" />
 		 <variable name="SOFTWARE" value="\\10.134.62.2\wpkg\software" />
-		<package package-id="sketchup" />
-		<package package-id="sweethome3d" />
-	</profile> -->
+		 <package package-id="sketchup" /> 
+		<!-- <package package-id="sweethome3d" /> -->
+	</profile>
 	
 	<!-- <profile id="histgeo">
 		 <depends profile-id="base" />
@@ -52,16 +59,32 @@
 		<package package-id="googleearth" />
 	</profile> -->
 
-	<!-- <profile id="math">
+	<profile id="math">
 		 <depends profile-id="base" />
 		 <variable name="SOFTWARE" value="\\10.134.62.2\wpkg\software" />
 		<package package-id="geogebra" />
-	</profile> -->
+	</profile>
 
 
 	<profile id="test">
 		<variable name="SOFTWARE" value="\\10.134.62.2\wpkg\software" />
+		<package package-id="firefox_unattend" />
+		<package package-id="Java7" />
+		<package package-id="flash_active_x" />
+		<package package-id="flash_plugin" />
+		<package package-id="air" />
+		<!-- <package package-id="shockwave" /> -->
+		<package package-id="shockwave12" />
+		<package package-id="LibreOffice" />
+		<!-- <package package-id="Firefox" /> -->		
+		<package package-id="VLC" />
+		<package package-id="OCS" />
+	</profile>
+	
+	<profile id="test2">
 		 <depends profile-id="base" />
+		 <variable name="SOFTWARE" value="\\10.134.62.2\wpkg\software" />
+		<package package-id="adobereader" />
 	</profile>
 
 	<profile id="base">
@@ -70,7 +93,8 @@
 		<package package-id="flash_active_x" />
 		<package package-id="flash_plugin" />
 		<package package-id="air" />
-	<!--	<package package-id="shockwave" /> -->
+		<package package-id="shockwave12" />
+		<package package-id="adobereader" />
 		<package package-id="LibreOffice" />
 		<package package-id="Firefox" />		
 		<package package-id="VLC" />
