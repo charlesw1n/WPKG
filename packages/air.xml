@@ -4,12 +4,12 @@
 
 	<package 
 		id="air"
-		name="Adobe AIR 3.7.0.1860"
+		name="Adobe AIR 3.9.0.1030"
 		revision="%version%.1"
 		reboot="false"
 		priority="885">
  
-	<variable name="version" value="3.7.0.1860" />
+	<variable name="version" value="3.9.0.1030" />
  
 	<check type="uninstall" condition="versiongreaterorequal" path="Adobe AIR" value="%version%" />
  

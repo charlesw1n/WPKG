@@ -17,7 +17,7 @@
  
         <upgrade include="install" />
  
-	<remove cmd='MsiExec.exe /X{58597FDC-CDF0-4760-A57C-250DF09F4A21}' />
+	<remove cmd='MsiExec.exe /qn /X {58597FDC-CDF0-4760-A57C-250DF09F4A21}' />
  
 	</package>
 

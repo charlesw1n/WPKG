@@ -5,7 +5,7 @@
 	<package 
 		id="Firefox"
 		name="Mozilla Firefox 21.0"
-		revision="%version%.7"
+		revision="%version%.13"
 		reboot="false"
 		priority="695">
  
@@ -16,21 +16,14 @@
 	<check type="uninstall" condition="exists" path="Mozilla Firefox %version% (x86 fr)" />
  
 	<install cmd='"%SOFTWARE%\firefox\Firefox Setup %version%.exe" -ms' />
-	<install cmd='%ComSpec% /C if exist "%ALLUSERSPROFILE%\Bureau\Mozilla Firefox.lnk" del "%ALLUSERSPROFILE%\Bureau\Mozilla Firefox.lnk"' />
 	
 	<install cmd='%ComSpec% /C if not exist "%pfiles%\Mozilla Firefox\browser\defaults\preferences" MD "%pfiles%\Mozilla Firefox\browser\defaults\preferences"' />
 	
-	<install cmd='%ComSpec% /C if not exist "%pfiles%\Mozilla Firefox\browser\defaults\profile\chrome" MD "%pfiles%\Mozilla Firefox\browser\defaults\profile\chrome"' />
-	
 	<install cmd='%ComSpec% /C if exist "%pfiles%\Mozilla Firefox\browser" copy /Y "%SOFTWARE%\firefox\override.ini" "%pfiles%\Mozilla Firefox\browser" ' />
 	<install cmd='%ComSpec% /C if exist "%pfiles%\Mozilla Firefox\" copy /Y "%SOFTWARE%\firefox\mozilla.cfg" "%pfiles%\Mozilla Firefox\" ' />
-	
-	<install cmd='%ComSpec% /C if exist "%pfiles%\Mozilla Firefox\browser\defaults\preferences" copy /Y "%SOFTWARE%\firefox\local-settings.js" "%pfiles%\Mozilla Firefox\browser\defaults\preferences" ' />
-	
-	<install cmd='%ComSpec% /C if exist "%pfiles%\Mozilla Firefox\" copy /Y "%SOFTWARE%\firefox\cert8.db" "%pfiles%\Mozilla Firefox" ' />
-	
-	<install cmd='%ComSpec% /C if exist "%pfiles%\Mozilla Firefox\browser\defaults\profile\chrome" copy /Y "%SOFTWARE%\firefox\userChrome.css" "%pfiles%\Mozilla Firefox\browser\defaults\profile\chrome" ' />
-	
+	<install cmd='%ComSpec% /C if exist "%pfiles%\Mozilla Firefox\" copy /Y "%SOFTWARE%\firefox\local-settings.js" "%pfiles%\Mozilla Firefox\browser\defaults\preferences" ' />
+	<install cmd='%ComSpec% /C if exist "%pfiles%\Mozilla Firefox\" copy /Y "%SOFTWARE%\firefox\cert8.db" "%pfiles%\Mozilla Firefox\browser\defaults" ' />
+		
     <upgrade include="install" />
  
     <!-- for 32bit and 64bit System -->

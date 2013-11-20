@@ -4,12 +4,12 @@
 
 	<package 
 		id="flash_active_x"
-		name="Adobe Flash Player 11 ActiveX"
+		name="Adobe Flash Player 11.9.900.117 ActiveX"
 		revision="%version%.1"
 		reboot="false"
 		priority="895">
  
-	<variable name="version" value="11.7.700.224" />
+	<variable name="version" value="11.9.900.117" />
 	
 
 	<check type="uninstall" condition="versiongreaterorequal" path="Adobe Flash Player 11 ActiveX" value="%version%" />

@@ -1,0 +1,23 @@
+<packages:packages xmlns:packages="http://www.wpkg.org/packages"
+	xmlns:wpkg="http://www.wpkg.org/wpkg" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.wpkg.org/packages ../xsd/packages.xsd">
+		
+	<package 
+		id="wpkg"
+		name="WPKG"
+		revision="%version%.1"
+		reboot="false"
+		priority="1">
+ 
+	<variable name="version" value="0.15" />
+
+	<check type="uninstall" condition="exists" path="Wpkg-GP %version% .+" />
+ 
+	<install architecture="x86" cmd='%SOFTWARE%\wpkg\win_xp.exe /S /DisableViaLGP' />
+	<install architecture="x64" cmd='%SOFTWARE%\wpkg\win_7.exe /S /DisableViaLGP' />
+	
+		<upgrade include='install' />
+
+	</package>
+  
+</packages:packages>

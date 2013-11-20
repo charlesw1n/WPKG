@@ -4,14 +4,14 @@
 	
 	<package
 		id="LibreOffice" 
-		name="Libre Office 4.0.3.3" 
+		name="Libre Office 4.1.3.2" 
 		revision="%version%.1"
 		reboot="false" 
 		priority="700">
 		
 	<depends package-id="Java7" />
  
-	<variable name="version" value="4.0.3.3" />
+	<variable name="version" value="4.1.3.2" />
 	 
 	<check type="uninstall" condition="versiongreaterorequal" path="LibreOffice .+" value="%version%" />
  
@@ -19,7 +19,7 @@
  
 	<upgrade include="install" />
  
-	<remove cmd="msiexec /qb! /uninstall {8EA569F1-97AF-4C3E-A0CB-4846C2D35A81}" />
+	<remove cmd="msiexec /qn /x {8EA569F1-97AF-4C3E-A0CB-4846C2D35A81}" />
  
 	</package>
 	

@@ -4,12 +4,12 @@
 		
 	<package 
 		id="VLC"
-		name="VLC 2.0.5"
-		revision="%version%"
+		name="VLC 2.0.8"
+		revision="%version%.1"
 		reboot="false"
 		priority="690">
  
-	<variable name="version" value="2.0.5" />
+	<variable name="version" value="2.0.8" />
 
 	<check type="uninstall" condition="exists" path="VLC media player %version%" />
  

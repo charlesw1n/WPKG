@@ -6,7 +6,7 @@
 <package 
 	id="geogebra"
 	name="GeoGebra 4.2.30.0"
-	revision="%version%.2"
+	revision="%version%.3"
 	reboot="false"
 	priority="685">
  
@@ -17,11 +17,12 @@
 	<check type="uninstall" condition="versiongreaterorequal" path="GeoGebra 4.2" value="%version%" />
  
 	<install cmd='msiexec /i %SOFTWARE%\geogebra\GeoGebra_%version%.msi /qn' />
-	<install cmd='%ComSpec% /C copy "%SOFTWARE%\geogebra\GeoGebra.lnk" "%ALLUSERSPROFILE%\Bureau\GeoGebra.lnk" /Y' />
+	<install architecture="x86" cmd='%ComSpec% /C copy "%SOFTWARE%\geogebra\GeoGebra.lnk" "%ALLUSERSPROFILE%\Bureau\GeoGebra.lnk" /Y' />
+	<install architecture="x64" cmd='%ComSpec% /C copy "%SOFTWARE%\geogebra\GeoGebra_7.lnk" "%ALLUSERSPROFILE%\Bureau\GeoGebra.lnk" /Y' />
  
     <upgrade include="install" />
  
-	<remove cmd="msiexec /qb! /uninstall {D44FFF47-306C-4198-9899-832C1DAA4566}" />
+	<remove cmd="msiexec /qn /uninstall {D44FFF47-306C-4198-9899-832C1DAA4566}" />
  
 </package>
 
