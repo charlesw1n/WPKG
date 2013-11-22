@@ -4,12 +4,12 @@
 
 	<package 
 		id="Firefox"
-		name="Mozilla Firefox 21.0"
-		revision="%version%.13"
+		name="Mozilla Firefox 25.0.1"
+		revision="%version%.14"
 		reboot="false"
 		priority="695">
  
-	<variable name="version" value="21.0" />
+	<variable name="version" value="25.0.1" />
 	<variable name="pfiles" value="%programfiles%" architecture="x86" />
 	<variable name="pfiles" value="%ProgramFiles(x86)%" architecture="x64" />
 
@@ -22,7 +22,6 @@
 	<install cmd='%ComSpec% /C if exist "%pfiles%\Mozilla Firefox\browser" copy /Y "%SOFTWARE%\firefox\override.ini" "%pfiles%\Mozilla Firefox\browser" ' />
 	<install cmd='%ComSpec% /C if exist "%pfiles%\Mozilla Firefox\" copy /Y "%SOFTWARE%\firefox\mozilla.cfg" "%pfiles%\Mozilla Firefox\" ' />
 	<install cmd='%ComSpec% /C if exist "%pfiles%\Mozilla Firefox\" copy /Y "%SOFTWARE%\firefox\local-settings.js" "%pfiles%\Mozilla Firefox\browser\defaults\preferences" ' />
-	<install cmd='%ComSpec% /C if exist "%pfiles%\Mozilla Firefox\" copy /Y "%SOFTWARE%\firefox\cert8.db" "%pfiles%\Mozilla Firefox\browser\defaults" ' />
 		
     <upgrade include="install" />
  
