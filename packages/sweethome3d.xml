@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<packages:packages
+        xmlns:packages="http://www.wpkg.org/packages" xmlns:wpkg="http://www.wpkg.org/wpkg" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.wpkg.org/packages ../xsd/packages.xsd" >
+
+<package 
+	id="sweethome3d"
+	name="SweetHome 3D 4.2"
+	revision="%version%.1"
+	reboot="false"
+	priority="11">
+ 
+	<variable name="version" value="4.2" />
+
+	<check type="uninstall" condition="exists" path="Sweet Home 3D version %version%" />
+ 
+	<install cmd='"%SOFTWARE%\SweetHome3D\SweetHome3D-%version%-windows.exe" /sp- /verysilent' />
+	<install cmd='%ComSpec% /c copy "%SOFTWARE%\SweetHome3D\SweetHome3D.l4j.ini" "%PROGRAMFILES%\Sweet Home 3D" /Y' />
+ 
+    <upgrade include="install" />
+ 
+    <remove cmd='"%PROGRAMFILES%\Sweet Home 3D\unins000.exe" /verysilent' />
+    <remove cmd='%ComSpec% /c del /f /q "%ProgramFiles%\Sweet Home 3D\*"' />
+ 
+</package>
+
+</packages:packages>
