@@ -4,16 +4,16 @@
 		
 	<package 
 		id="VLC"
-		name="VLC 2.0.8"
-		revision="%version%.1"
+		name="VLC 2.1.1"
+		revision="%version%.5"
 		reboot="false"
 		priority="690">
  
-	<variable name="version" value="2.0.8" />
+	<variable name="version" value="2.1.1" />
 
 	<check type="uninstall" condition="exists" path="VLC media player %version%" />
  
-	<install cmd='"%SOFTWARE%\vlc-%version%-win32.exe" /L=1036 /S' />
+	<install cmd='"%SOFTWARE%\vlc-%version%-win32.exe" /L=1036 /S /NCRC' />
 	<install cmd='%ComSpec% /C if exist "%ALLUSERSPROFILE%\Bureau\VLC media player.lnk" del "%ALLUSERSPROFILE%\Bureau\VLC media player.lnk"' />
 	
 	<remove cmd='"%PROGRAMFILES%\VideoLAN\VLC\uninstall.exe" /S' />
