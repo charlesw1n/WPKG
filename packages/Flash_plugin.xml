@@ -4,17 +4,17 @@
 
 	<package 
 		id="flash_plugin"
-		name="Adobe Flash Player 11.9.900.117 Plugin"
+		name="Adobe Flash Player 12.0.0.43 Plugin"
 		revision="%version%.1"
 		reboot="false"
 		priority="890">
  
-	<variable name="version" value="11.9.900.117" />
-	<variable name="verunin" value="11_9_900_117" />
+	<variable name="version" value="12.0.0.43" />
+	<variable name="verunin" value="12_0_0_43" />
 
-	<check type="uninstall" condition="versiongreaterorequal" path="Adobe Flash Player 11 Plugin" value="%version%" />
+	<check type="uninstall" condition="versiongreaterorequal" path="Adobe Flash Player 12 Plugin" value="%version%" />
  
-	<install cmd='msiexec /i %SOFTWARE%\adobe\install_flash_player_11_plugin.msi /qn' />
+	<install cmd='msiexec /i %SOFTWARE%\adobe\install_flash_player_12_plugin.msi /qn' />
  
         <upgrade include="install" />
  
