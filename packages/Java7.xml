@@ -4,12 +4,12 @@
 
     <package
         id="Java7"
-        name="Java 7 Update 45"
+        name="Java 7 Update 51"
         revision="%version%.1"
         reboot="false"
         priority="900">
 
-    <variable name="version" value="45" />
+    <variable name="version" value="51" />
 
 	<check type="uninstall" condition="exists" path="Java 7 Update %version%" />
 
