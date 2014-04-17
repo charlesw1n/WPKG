@@ -4,17 +4,17 @@
 
 	<package 
 		id="flash_active_x"
-		name="Adobe Flash Player 12.0.0.38 ActiveX"
+		name="Adobe Flash Player 13.0.0.182 ActiveX"
 		revision="%version%.1"
 		reboot="false"
 		priority="895">
  
-	<variable name="version" value="12.0.0.38" />
+	<variable name="version" value="13.0.0.182" />
 	
 
-	<check type="uninstall" condition="versiongreaterorequal" path="Adobe Flash Player 12 ActiveX" value="%version%" />
+	<check type="uninstall" condition="versiongreaterorequal" path="Adobe Flash Player 13 ActiveX" value="%version%" />
  
-	<install cmd='msiexec /i %SOFTWARE%\adobe\install_flash_player_12_active_x.msi /qn' />
+	<install cmd='msiexec /i %SOFTWARE%\adobe\install_flash_player_13_active_x.msi /qn' />
  
         <upgrade include="install" />
  
