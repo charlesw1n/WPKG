@@ -1,0 +1,27 @@
+﻿<packages:packages xmlns:packages="http://www.wpkg.org/packages"
+	xmlns:wpkg="http://www.wpkg.org/wpkg" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.wpkg.org/packages ../xsd/packages.xsd" >
+
+	<package 
+		id="Photofiltre"
+		name="Photofiltre 7.1.2"
+		revision="%version%.1"
+		reboot="false"
+		priority="884">
+ 
+	<variable name="version" value="7.1.2" />
+	<variable name="pfile" value="%programfiles(x86)%" architecture="x64" />
+
+	<variable name="pfile" value="%programfiles%" architecture="x86" />
+ 
+	<check type="file" condition="versiongreaterorequal" path="%pfile%\photofiltre 7\PhotoFiltre7.exe" value="%version%" />
+ 
+	<install cmd="%SOFTWARE%\pf7-setup-fr.exe /S" />
+ 
+        <upgrade include="install" />
+ 
+	<remove cmd="%pfile%\photofiltre 7\Uninst.exe /S" />
+ 
+	</package>
+
+</packages:packages>
