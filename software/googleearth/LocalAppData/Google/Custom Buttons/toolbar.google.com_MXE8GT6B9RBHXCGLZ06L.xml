@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<custombuttons xmlns="http://toolbar.google.com/custombuttons/">
+  <button>
+    <title>Google Earth</title>
+    <description>Google Earth</description>
+    <search>http://maps.google.com/maps?q={query}&amp;output=kml</search>
+    <site>http://earth.google.com/</site>
+    <icon mode="base64">
+R0lGODlhEAAQAPfDAA40ViRReM7q/c7h8hA6XxM/ZjpUbDpVbgUrTB88VqSuuBJNgQw5YRVOgS+B
+wlNpfQ8yUhhJdRxMdgkvUqy7ytHd59Xe5Nfe5UZjfiZoojlad0FhfvD095umsSNln32SpU9meytz
+sCJzummCmCZmnUqp7CBWh7S+x6S+1RY8X3SJm0FedzqGxp2tupams2d5iRYzTRRYlD6V1i54uKSw
+uxw7V2F1hkRbb4merx5SgImaqU1tih08WV638vv7/Mzd66i1wZKjsiJAWwcpRwc3YwAkSDJijEOD
+vG+ZvszU3AYqSqS1xNHo94Cqzm6p2hpFbDuX2yiByV1/nVN0kVOGsmOBmwYpSCJai2at41mv6nWv
+4B1ioSRnoqvM6O/y9dzs+dzi6DRcfjWS1xMzUCdqpVBpgCpyrypspn6QnxVQhg8zVF6HrIOVpTxb
+dx5RfWqJpqu8zC+CxCVkm/Hz9Qo0WSZWgRQ6Wyt5uziR05mxxz1cdx9dlTJzrk5pgDWFyh5Jb5So
+uc3b5vn6+3ms2TZXdFt3j4mZp0qBswErUFam4aazvoGmxdDb5GuBlR5vt4+hsGCUwiNglhI/aS9k
+k3mRpp650B1OelBofaexvPX4/JilsGeIpEVccFd+oZ2uvofM9hhBZR5VhxhQgqvA0tHZ36G91wsq
+R/z8/C9/wCZtrGyFmwsqRihspxE5XKne/TthgqOzwaa0waKywdDi8wkrSltugTVfhHqYtBdQhOfs
+70llfXKGl+34/pajryx2tT9ffS58vBIvSf///////wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAMMALAAAAAAQABAA
+AAj8AIcJFDjq1psqqoAMXDgMxZZUkEoFshBrhSKGSI4McuLH0Zk1jASpQDOwUpNMwoR90SIihhsK
+wnbREEhlFhNeKYV14bPgTxIfBoblOcQi0SdXAlL+mESE0JwTmDp5uCMjS48SWAYIqxAGkS5DNupE
+MhMHDxQxUWYs4pBLQxFanAKYIBECmANUvriksSWLVCMhN6ZEaLAnAysycq5YKkCnjY4HtQC92mRE
+FK5QOSQ8AZVCjZVVCobtEOYFjpQAkhgQaAUAwphgAnF4SnnqwhJKhTD0OQCjw8ARsMBs+PWhRRA2
+lxK8YPhIjx0AExAoGWJKE8OBLsrwqAGiF8OAADs=
+    </icon>
+    <legacy>GoogleEarth</legacy>
+    <update>http://toolbar.google.com/buttons/defs/earth.google.com.xml</update>
+  </button>
+</custombuttons>
