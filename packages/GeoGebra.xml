@@ -5,20 +5,20 @@
 
 <package 
 	id="geogebra"
-	name="GeoGebra 4.4.1.0"
+	name="GeoGebra 4.4.43.0"
 	revision="%version%.1"
 	reboot="false"
 	priority="685">
  
-	<variable name="version" value="4.4.1.0" />
+	<variable name="version" value="4.4.43.0" />
 
 	<depends package-id="Java7" />
  
 	<check type="uninstall" condition="versiongreaterorequal" path="GeoGebra 4.4" value="%version%" />
  
-	<install cmd='msiexec /i %SOFTWARE%\geogebra\GeoGebra_%version%.msi /qn' />
-	<install architecture="x86" cmd='%ComSpec% /C copy "%SOFTWARE%\geogebra\GeoGebra.lnk" "%ALLUSERSPROFILE%\Bureau\GeoGebra.lnk" /Y' />
-	<install architecture="x64" cmd='%ComSpec% /C copy "%SOFTWARE%\geogebra\GeoGebra_7.lnk" "%ALLUSERSPROFILE%\Bureau\GeoGebra.lnk" /Y' />
+	<install cmd='msiexec /i %SOFTWARE%\geogebra\GeoGebra_%version%.msi ALLUSERS=2 /qn' />
+<!--	<install architecture="x86" cmd='%ComSpec% /C copy "%SOFTWARE%\geogebra\GeoGebra.lnk" "%ALLUSERSPROFILE%\Bureau\GeoGebra.lnk" /Y' />
+	<install architecture="x64" cmd='%ComSpec% /C copy "%SOFTWARE%\geogebra\GeoGebra_7.lnk" "%ALLUSERSPROFILE%\Bureau\GeoGebra.lnk" /Y' /> -->
  
     <upgrade include="install" />
  
