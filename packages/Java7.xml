@@ -4,16 +4,16 @@
 
     <package
         id="Java7"
-        name="Java 7 Update 55"
+        name="Java 7 Update 67"
         revision="%version%.1"
         reboot="false"
         priority="900">
 
-    <variable name="version" value="55" />
+    <variable name="version" value="67" />
 
 	<check type="uninstall" condition="exists" path="Java 7 Update %version%" />
 
-    <install cmd='msiexec /i %SOFTWARE%\java\jre1.7.0_%version%.msi /qn IEXPLORER=1 MOZILLA=1 ADDLOCAL=ALL REBOOT=Suppress EULA=1' />
+    <install cmd='msiexec /i %SOFTWARE%\java7\jre1.7.0_%version%.msi /qn IEXPLORER=1 MOZILLA=1 ADDLOCAL=ALL REBOOT=Suppress EULA=1' />
         
     	<upgrade include="install" />
 	
