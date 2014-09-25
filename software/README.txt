@@ -4,6 +4,7 @@ Firefox : http://www.mozilla.org/products/firefox
 Java 7 : http://java.com/fr/download/manual.jsp
 LibreOffice : http://www.libreoffice.org/download
 Flash : http://www.adobe.com/products/flashplayer/fp_distribution3.html
+Shockwave : http://www.adobe.com/products/shockwaveplayer/shwv_distribution3.html
 AIR : http://www.adobe.com/products/air/runtime-distribution3.html
-Reader : http://download.adobe.com/pub/adobe/reader/win/11.x/11.0.08/fr_FR/AdbeRdr11008_fr_FR.exe
---> remplacer 11.0.08 / 11008 par la version désirée dans la branche 11 de Reader.
+Reader : http://download.adobe.com/pub/adobe/reader/win/11.x/11.0.09/fr_FR/AdbeRdr11009_fr_FR.exe
+--> remplacer 11.0.09 / 11009 par la version voulue dans la branche 11 de Reader.
