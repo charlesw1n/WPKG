@@ -4,21 +4,22 @@
 
 	<package 
 		id="flash_active_x"
-		name="Adobe Flash Player 14.0.0.176 ActiveX"
+		name="Adobe Flash Player 16.0.0.235 ActiveX"
 		revision="%version%.1"
 		reboot="false"
 		priority="895">
  
-	<variable name="version" value="14.0.0.176" />
+	<variable name="version" value="16.0.0.235" />
 	
 
-	<check type="uninstall" condition="versiongreaterorequal" path="Adobe Flash Player 14 ActiveX" value="%version%" />
+	<check type="uninstall" condition="versiongreaterorequal" path="Adobe Flash Player 16 ActiveX" value="%version%" />
  
-	<install cmd='msiexec /i %SOFTWARE%\adobe\install_flash_player_14_active_x.msi /qn' />
+	<install cmd='msiexec /i %SOFTWARE%\adobe\install_flash_player_16_active_x.msi /qn' />
  
         <upgrade include="install" />
  
-	<remove cmd="msiexec /qn /uninstall {9223BBDE-693D-4B5F-A1DE-C40C7D2E4C89}" />
+	<remove cmd='%COMSPEC% /C if exist "C:\Windows\SysWOW64\Macromed\Flash\FlashUtil32_%verunin%_Plugin.exe" "C:\Windows\SysWOW64\Macromed\Flash\FlashUtil32_%verunin%_ActiveX.exe" -maintain activex' />
+	<remove cmd='%COMSPEC% /C if exist "C:\Windows\System32\Macromed\Flash\FlashUtil32_%verunin%_Plugin.exe" "C:\Windows\System32\Macromed\Flash\FlashUtil32_%verunin%_ActiveX.exe" -maintain activex' />
  
 	</package>
 
