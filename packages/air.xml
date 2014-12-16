@@ -4,12 +4,14 @@
 
 	<package 
 		id="air"
-		name="Adobe AIR 14.0.0.178"
+		name="Adobe AIR 15.0.0.356"
 		revision="%version%.1"
 		reboot="false"
 		priority="885">
  
-	<variable name="version" value="14.0.0.178" />
+	<variable name="version" value="15.0.0.356" />
+	<variable name="pfiles" value="C:\Program Files (x86)" />
+	<variable name="pfiles" value="C:\Program Files" />
  
 	<check type="uninstall" condition="versiongreaterorequal" path="Adobe AIR" value="%version%" />
  
@@ -17,8 +19,8 @@
  
         <upgrade include="install" />
  
-	<remove cmd="%SOFTWARE%\adobe\AdobeAIRInstaller.exe -uninstall" />
- 
+	<remove cmd="msiexec /qn /x {7BBAEC47-1CC0-4CB8-ADB4-531B78DBD1DD}" />
+	 
 	</package>
 
 </packages:packages>
