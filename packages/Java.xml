@@ -1,0 +1,34 @@
+﻿<packages:packages xmlns:packages="http://www.wpkg.org/packages"
+	xmlns:wpkg="http://www.wpkg.org/wpkg" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.wpkg.org/packages ../xsd/packages.xsd">
+
+    <package
+        id="Java"
+        name="Java 8 Update 25 (Windows 7) / Java 7 Update 71 (Windows XP)"
+        revision="%version%.5"
+        reboot="false"
+        priority="901">
+
+    <variable name="verj8" value="25" />
+	<variable name="verj7" value="71" />
+
+	<check type="uninstall" os="microsoft windows 7 professionnel, , sp1, 6.1.7601" condition="exists" path="Java 8 Update %verj8%" />
+	<check type="uninstall" os="microsoft windows xp professionnel, , sp3, 5.1.2600" condition="exists" path="Java 7 Update %verj7%" />
+	
+	<remove cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F83217071FF}" />
+	<remove cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F03217067FF}" />
+    <install os="microsoft windows xp professionnel, , sp3, 5.1.2600" cmd='msiexec /i %SOFTWARE%\java\v7\jre1.7.0_%verj7%.msi /qn IEXPLORER=1 MOZILLA=1 ADDLOCAL=ALL REBOOT=Suppress EULA=1' />
+	
+	<install os="microsoft windows 7 professionnel, , sp1, 6.1.7601" cmd='msiexec /i %SOFTWARE%\java\v8\jre1.8.0_%verj8%.msi /qn IEXPLORER=1 MOZILLA=1 ADDLOCAL=ALL REBOOT=Suppress EULA=1' />
+		
+	<!-- <install architecture="x86" cmd='REG DELETE HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run /v SunJavaUpdateSched /f' />
+	<install architecture="x64" cmd='REG DELETE HKLM\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Run /v SunJavaUpdateSched /f' /> -->
+        
+    	<upgrade include="install" />
+	
+	<remove cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832180%verj8%FF}" />
+	<remove cmd="msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F832170%verj7%FF}" />
+	
+    </package>
+	
+</packages:packages>
