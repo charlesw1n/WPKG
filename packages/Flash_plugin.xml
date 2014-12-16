@@ -4,17 +4,17 @@
 
 	<package 
 		id="flash_plugin"
-		name="Adobe Flash Player 14.0.0.179 Plugin"
+		name="Adobe Flash Player 16.0.0.235 Plugin"
 		revision="%version%.1"
 		reboot="false"
 		priority="890">
  
-	<variable name="version" value="14.0.0.179" />
-	<variable name="verunin" value="14_0_0_179" />
+	<variable name="version" value="16.0.0.235" />
+	<variable name="verunin" value="16_0_0_235" />
 
-	<check type="uninstall" condition="versiongreaterorequal" path="Adobe Flash Player 14 Plugin" value="%version%" />
+	<check type="uninstall" condition="versiongreaterorequal" path="Adobe Flash Player 16 Plugin" value="%version%" />
  
-	<install cmd='msiexec /i %SOFTWARE%\adobe\install_flash_player_14_plugin.msi /qn' />
+	<install cmd='msiexec /i %SOFTWARE%\adobe\install_flash_player_16_plugin.msi /qn' />
  
         <upgrade include="install" />
  
