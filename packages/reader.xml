@@ -4,13 +4,13 @@
 		
 	<package 
 		id="adobereader"
-		name="Adobe Acrobat Reader 11.0.08"
+		name="Adobe Acrobat Reader 11.0.10"
 		revision="%version%.1"
 		reboot="false"
 		priority="879">
  
-	<variable name="version" value="11.0.08" />
-	<variable name="versioncourt" value="11008" />
+	<variable name="version" value="11.0.10" />
+	<variable name="versioncourt" value="11010" />
 
 	<check type="uninstall" condition="exists" path="Adobe Reader XI (%version%) - Français" />
  
