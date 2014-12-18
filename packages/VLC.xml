@@ -5,18 +5,21 @@
 	<package 
 		id="VLC"
 		name="VLC 2.1.5"
-		revision="%version%.1"
+		revision="%version%.5"
 		reboot="false"
 		priority="690">
  
 	<variable name="version" value="2.1.5" />
+	<variable name="pfiles" value="%programfiles%" architecture="x86" />
+	<variable name="pfiles" value="%ProgramFiles(x86)%" architecture="x64" />
 
-	<check type="uninstall" condition="exists" path="VLC media player %version%" />
+	<check type="uninstall" condition="versiongreaterorequal" path="VLC media player" value="%version%" />
  
+	<install cmd='%ComSpec% /C if exist "%pfiles%\VideoLAN\VLC\uninstall.exe" "%pfiles%\VideoLAN\VLC\uninstall.exe" /S' />
 	<install cmd='"%SOFTWARE%\vlc-%version%-win32.exe" /L=1036 /S /NCRC' />
 	<install cmd='%ComSpec% /C if exist "%ALLUSERSPROFILE%\Bureau\VLC media player.lnk" del "%ALLUSERSPROFILE%\Bureau\VLC media player.lnk"' />
 	
-	<remove cmd='"%PROGRAMFILES%\VideoLAN\VLC\uninstall.exe" /S' />
+	<remove cmd='"%pfiles%\VideoLAN\VLC\uninstall.exe" /S' />
 
 	</package>
   
