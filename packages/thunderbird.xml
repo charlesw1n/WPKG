@@ -4,12 +4,12 @@
 
 	<package 
 		id="Thunderbird"
-		name="Mozilla Thunderbird 24.3.0"
+		name="Mozilla Thunderbird 31.3.0"
 		revision="%version%.2"
 		reboot="false"
 		priority="694">
  
-	<variable name="version" value="24.3.0" />
+	<variable name="version" value="31.3.0" />
 	<variable name="pfiles" value="%programfiles%" architecture="x86" />
 	<variable name="pfiles" value="%ProgramFiles(x86)%" architecture="x64" />
 
