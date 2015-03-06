@@ -1,0 +1,24 @@
+﻿<packages:packages xmlns:packages="http://www.wpkg.org/packages"
+	xmlns:wpkg="http://www.wpkg.org/wpkg" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.wpkg.org/packages ../xsd/packages.xsd" >
+
+	<package 
+		id="shockwave12"
+		name="Adobe Shockwave Player 12.1.7.157"
+		revision="%version%.1"
+		reboot="false"
+		priority="881">
+ 
+	<variable name="version" value="12.1.7.157" />
+ 
+	<check type="uninstall" condition="versiongreaterorequal" path="Adobe Shockwave Player 12.1" value="%version%" />
+ 
+	<install cmd='msiexec /i %SOFTWARE%\adobe\Shockwave_Installer_12.1.msi /qn' />
+ 
+        <upgrade include="install" />
+ 
+	<remove cmd='MsiExec.exe /qn /X {755DDD59-9690-4F1A-BE9C-D39BDCFA77C9}' />
+ 
+	</package>
+
+</packages:packages>
