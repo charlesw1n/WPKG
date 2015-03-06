@@ -5,16 +5,16 @@
 	<package 
 		id="wpkg"
 		name="WPKG"
-		revision="%version%.1"
+		revision="%version%.2"
 		reboot="false"
 		priority="1">
  
-	<variable name="version" value="0.15" />
+	<variable name="version" value="0.17" />
 
 	<check type="uninstall" condition="exists" path="Wpkg-GP %version% .+" />
  
-	<install architecture="x86" cmd='%SOFTWARE%\wpkg\win_xp.exe /S /DisableViaLGP' />
-	<install architecture="x64" cmd='%SOFTWARE%\wpkg\win_7.exe /S /DisableViaLGP' />
+	<install architecture="x86" cmd='%SOFTWARE%\wpkg\Wpkg-GP-%version%_x86.exe /S /DisableViaLGP' />
+	<install architecture="x64" cmd='%SOFTWARE%\wpkg\Wpkg-GP-%version%_x64.exe /S /DisableViaLGP' />
 	
 		<upgrade include='install' />
 
