@@ -5,18 +5,21 @@
 	<package 
 		id="wpkg"
 		name="WPKG"
-		revision="%version%.2"
+		revision="%version%.3"
 		reboot="false"
 		priority="1">
  
 	<variable name="version" value="0.17" />
+	<variable name="arch" value="86" architecture="x86" />
+	<variable name="arch" value="64" architecture="x64" />
 
-	<check type="uninstall" condition="exists" path="Wpkg-GP %version% .+" />
+	<check type="uninstall" condition="versiongreaterorequal" path="Wpkg-GP %version% .*" value="%version%" />
  
-	<install architecture="x86" cmd='%SOFTWARE%\wpkg\Wpkg-GP-%version%_x86.exe /S /DisableViaLGP' />
-	<install architecture="x64" cmd='%SOFTWARE%\wpkg\Wpkg-GP-%version%_x64.exe /S /DisableViaLGP' />
-	
-		<upgrade include='install' />
+	<install cmd='%SOFTWARE%\wpkg\Wpkg-GP-%version%_x%arch%.exe /S /DisableViaLGP' >
+		<exit code="3010" reboot="delayed" />
+	</install>
+		
+	<upgrade include='install' />
 
 	</package>
   
