@@ -10,14 +10,16 @@
 		priority="690">
  
 	<variable name="version" value="2.2.0" />
-	<variable name="pfiles" value="%programfiles%" architecture="x86" />
-	<variable name="pfiles" value="%ProgramFiles(x86)%" architecture="x64" />
+	<variable name="instdir" value="%programfiles%\VideoLAN" architecture="x86" />
+	<variable name="instdir" value="%ProgramFiles(x86)%\VideoLAN" architecture="x64" />
 
 	<check type="uninstall" condition="versiongreaterorequal" path="VLC media player" value="%version%" />
  
-	<install cmd='%ComSpec% /C if exist "%pfiles%\VideoLAN\VLC\uninstall.exe" "%pfiles%\VideoLAN\VLC\uninstall.exe" /S' />
-	<install cmd='"%SOFTWARE%\vlc-%version%-win32.exe" /L=1036 /S /NCRC' />
+	<install cmd='%ComSpec% /C if exist "%pfiles%\VideoLAN\VLC\uninstall.exe" "%pfiles%\VideoLAN\VLC\uninstall.exe" /S _?%instdir%\VLC' />
+	<install cmd='"%SOFTWARE%\vlc-%version%-win32.exe" /S' />
 	<install cmd='%ComSpec% /C if exist "%ALLUSERSPROFILE%\Bureau\VLC media player.lnk" del "%ALLUSERSPROFILE%\Bureau\VLC media player.lnk"' />
+	
+			<upgrade include='install' />
 	
 	<remove cmd='"%pfiles%\VideoLAN\VLC\uninstall.exe" /S' />
 
