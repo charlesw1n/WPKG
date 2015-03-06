@@ -5,7 +5,7 @@
     <package
         id="Java"
         name="Java 8 U 40 (Win7) / Java 7 U 75 (WinXP)"
-        revision="1.%verMaj.%verj8%.1"
+        revision="1.%verMaj.%verj8%.2"
         reboot="false"
         priority="901">
 
@@ -24,9 +24,16 @@
 	<install os="microsoft windows xp professionnel, , sp3, 5.1.2600" cmd='msiexec /i %SOFTWARE%\java\v7\jre1.7.0_%verj7%.msi /qn IEXPLORER=1 MOZILLA=1 ADDLOCAL=ALL REBOOT=Suppress EULA=1' />
 
 	<install os="microsoft windows 7 professionnel, , sp1, 6.1.7601" cmd='msiexec /i %SOFTWARE%\java\v8\jre1.8.0_%verj8%.msi /qn JU=0 JAVAUPDATE=0 AUTOUPDATECHECK=0 RebootYesNo=No WEB_JAVA=1' />
+
+<!-- Uninstall Java8 old version -->
 	<install os="microsoft windows 7 professionnel, , sp1, 6.1.7601" cmd='msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F83218025FF}'>
       <exit code='any' />
 	</install>
+	<install os="microsoft windows 7 professionnel, , sp1, 6.1.7601" cmd='msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F83218031FF}'>
+      <exit code='any' />
+	</install>
+	
+<!-- Uninstall Java7 old version -->	
 	<install os="microsoft windows 7 professionnel, , sp1, 6.1.7601" cmd='msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F83217071FF}'>
       <exit code='any' />
 	</install>
