@@ -1,9 +1,11 @@
 /!\ ATTENTION /!\
 
-Il est nécessaire de retirer des applications installés OCS Inventory dans le fichier profiles.xml.
-L'exécutable d'installation est paramétré pour contacter 10.234.62.2 sur le port 6000.
-Dans le cas ou OCS Server n'est pas installé sur une machine avec cette IP et ce port, le logiciel ne fonctionnera pas.
-Vous pouvez créer votre propre package OCS via le packager sur le site d'OCS.
+Si vous n'utilisez pas OCS Inventory, pensez à le supprimer des paquets installés.
 
-Il est necessaire de modifier le XML de Firefox afin de ne pas appliquer de mauvais paramètres.
-Celui proposé écrit un proxy qui n'est pas le votre.
+La version de l'exécutable fournie ici est spécifique et ne dois pas être utilisée !
+
+--------
+
+If you don't use OCS Inventory, remove it from the install list.
+
+The executable file provided here is specific and must not be used !
