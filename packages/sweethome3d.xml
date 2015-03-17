@@ -6,7 +6,7 @@
 <package 
 	id="sweethome3d"
 	name="SweetHome 3D 4.6"
-	revision="%version%.3"
+	revision="%version%.4"
 	reboot="false"
 	priority="11">
  
@@ -14,6 +14,7 @@
 
 	<check type="uninstall" condition="exists" path="Sweet Home 3D version %version%" />
 
+	<install cmd='%ComSpec% /c del /f /q "%ProgramFiles%\Sweet Home 3D"' />
 	<install cmd='"%SOFTWARE%\SweetHome3D\SweetHome3D-%version%-windows.exe" /VERYSILENT /SP-' />
 	<install cmd='%ComSpec% /c copy "%SOFTWARE%\SweetHome3D\SweetHome3D.l4j.ini" "%PROGRAMFILES%\Sweet Home 3D\" /Y' />
  
