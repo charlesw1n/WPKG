@@ -4,17 +4,17 @@
 
 	<package 
 		id="flash_plugin"
-		name="Adobe Flash Player 16.0.0.305 NPAPI"
+		name="Adobe Flash Player 17.0.0.134 NPAPI"
 		revision="%version%.1"
 		reboot="false"
 		priority="890">
  
-	<variable name="version" value="16.0.0.305" />
-	<variable name="verunin" value="16_0_0_305" />
+	<variable name="version" value="17.0.0.134" />
+	<variable name="verunin" value="17_0_0_134" />
 
-	<check type="uninstall" condition="versiongreaterorequal" path="Adobe Flash Player 16 NPAPI" value="%version%" />
+	<check type="uninstall" condition="versiongreaterorequal" path="Adobe Flash Player 17 NPAPI" value="%version%" />
  
-	<install cmd='msiexec /i %SOFTWARE%\adobe\install_flash_player_16_plugin.msi /qn' />
+	<install cmd='msiexec /i %SOFTWARE%\adobe\install_flash_player_17_plugin.msi /qn' />
  
         <upgrade include="install" />
  
