@@ -4,12 +4,12 @@
 
 	<package 
 		id="air"
-		name="Adobe AIR 17.0.0.124"
+		name="Adobe AIR 17.0.0.144"
 		revision="%version%.1"
 		reboot="false"
 		priority="885">
  
-	<variable name="version" value="17.0.0.124" />
+	<variable name="version" value="17.0.0.144" />
 	<variable name="pfiles" value="C:\Program Files (x86)" />
 	<variable name="pfiles" value="C:\Program Files" />
  
