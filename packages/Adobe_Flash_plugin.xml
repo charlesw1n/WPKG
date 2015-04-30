@@ -4,13 +4,13 @@
 
 	<package 
 		id="flash_plugin"
-		name="Adobe Flash Player 17.0.0.134 NPAPI"
+		name="Adobe Flash Player 17.0.0.169 NPAPI"
 		revision="%version%.1"
 		reboot="false"
 		priority="890">
  
-	<variable name="version" value="17.0.0.134" />
-	<variable name="verunin" value="17_0_0_134" />
+	<variable name="version" value="17.0.0.169" />
+	<variable name="verunin" value="17_0_0_169" />
 
 	<check type="uninstall" condition="versiongreaterorequal" path="Adobe Flash Player 17 NPAPI" value="%version%" />
  
