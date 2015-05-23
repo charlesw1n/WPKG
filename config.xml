@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!--
 	*******************************************************************************
 	* This is the WPKG configuration file.
@@ -568,7 +568,7 @@
 		****************************************************************************
 	-->
 
-		<param name='log_file_path' value='\\\\10.134.62.2\\wpkg\\logs' />
+		<param name='log_file_path' value='%TEMP%' />
 
 
 
@@ -602,7 +602,7 @@
 		****************************************************************************
 	-->
 
-		<param name='logfilePattern' value='[HOSTNAME].log' />
+		<param name='logfilePattern' value='wpkg-[HOSTNAME].log' />
 
 
 
