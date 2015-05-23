@@ -4,12 +4,12 @@
 		
 	<package 
 		id="VLC"
-		name="VLC 2.2.0"
+		name="VLC 2.2.1"
 		revision="%version%.1"
 		reboot="false"
 		priority="690">
  
-	<variable name="version" value="2.2.0" />
+	<variable name="version" value="2.2.1" />
 	<variable name="instdir" value="%programfiles%\VideoLAN" architecture="x86" />
 	<variable name="instdir" value="%ProgramFiles(x86)%\VideoLAN" architecture="x64" />
 
