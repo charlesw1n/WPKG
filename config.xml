@@ -567,9 +567,9 @@
 		* Command-line switch: /log_file_path:<path>
 		****************************************************************************
 	-->
-	<!--
-		<param name='log_file_path' value='%TEMP%' />
-	-->
+
+		<param name='log_file_path' value='\\\\10.134.62.2\\wpkg\\logs' />
+
 
 
 	<!--
@@ -601,9 +601,9 @@
 		* Command-line switch: /logfilePattern:<pattern>
 		****************************************************************************
 	-->
-	<!--
-		<param name='logfilePattern' value='wpkg-[HOSTNAME].log' />
-	-->
+
+		<param name='logfilePattern' value='[HOSTNAME].log' />
+
 
 
 	<!--
@@ -662,7 +662,7 @@
 
 		<param name='packages_path' value='packages' />
 		<param name='profiles_path' value='profiles.xml' />
-<!--		<param name='hosts_path'    value='hosts.xml|hosts' /> -->
+		<param name='hosts_path'    value='hosts.xml' />
 
 
 	<!--
