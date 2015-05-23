@@ -1,0 +1,32 @@
+﻿<packages:packages xmlns:packages="http://www.wpkg.org/packages"
+	xmlns:wpkg="http://www.wpkg.org/wpkg" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.wpkg.org/packages ../xsd/packages.xsd" >
+
+	<package 
+		id="Thunderbird"
+		name="Mozilla Thunderbird 31.3.0"
+		revision="%version%.2"
+		reboot="false"
+		priority="694">
+ 
+	<variable name="version" value="31.3.0" />
+	<variable name="pfiles" value="%programfiles%" architecture="x86" />
+	<variable name="pfiles" value="%ProgramFiles(x86)%" architecture="x64" />
+
+	<check type="uninstall" condition="exists" path="Mozilla Thunderbird %version% (x86 fr)" />
+ 
+	<install cmd='"%SOFTWARE%\thunderbird\Thunderbird Setup %version%.exe" -ms' />
+	
+	<install cmd='%ComSpec% /C if not exist "%pfiles%\Mozilla Thunderbird\defaults\pref" MD "%pfiles%\Mozilla Thunderbird\defaults\pref"' />
+	
+	<install cmd='%ComSpec% /C if exist "%pfiles%\Mozilla Thunderbird\" copy /Y "%SOFTWARE%\thunderbird\config_tb.js" "%pfiles%\Mozilla Thunderbird" ' />
+	<install cmd='%ComSpec% /C if exist "%pfiles%\Mozilla Thunderbird\" copy /Y "%SOFTWARE%\thunderbird\local-settings.js" "%pfiles%\Mozilla Thunderbird\defaults\pref" ' />
+		
+    <upgrade include="install" />
+ 
+    <!-- for 32bit and 64bit System -->
+	<remove cmd='%COMSPEC% /C if exist "%pfiles%\Mozilla Thunderbird\uninstall\helper.exe" "%pfiles%\Mozilla Thunderbird\uninstall\helper.exe" /s' />
+	 
+	</package>
+
+</packages:packages>

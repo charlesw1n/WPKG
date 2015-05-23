@@ -1,0 +1,26 @@
+﻿<packages:packages xmlns:packages="http://www.wpkg.org/packages" 
+	xmlns:wpkg="http://www.wpkg.org/wpkg" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.wpkg.org/packages ../xsd/packages.xsd" >
+
+	<package 
+		id="flash_active_x"
+		name="Adobe Flash Player 17.0.0.169 ActiveX"
+		revision="%version%.1"
+		reboot="false"
+		priority="895">
+ 
+	<variable name="version" value="17.0.0.169" />
+	
+
+	<check type="uninstall" condition="versiongreaterorequal" path="Adobe Flash Player 17 ActiveX" value="%version%" />
+ 
+	<install cmd='msiexec /i %SOFTWARE%\adobe\install_flash_player_17_active_x.msi /qn' />
+ 
+        <upgrade include="install" />
+ 
+	<remove cmd='%COMSPEC% /C if exist "C:\Windows\SysWOW64\Macromed\Flash\FlashUtil32_%verunin%_ActiveX.exe" "C:\Windows\SysWOW64\Macromed\Flash\FlashUtil32_%verunin%_ActiveX.exe" -maintain activex' />
+	<remove cmd='%COMSPEC% /C if exist "C:\Windows\System32\Macromed\Flash\FlashUtil32_%verunin%_ActiveX.exe" "C:\Windows\System32\Macromed\Flash\FlashUtil32_%verunin%_ActiveX.exe" -maintain activex' />
+ 
+	</package>
+
+</packages:packages>

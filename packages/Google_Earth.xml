@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<packages:packages
+        xmlns:packages="http://www.wpkg.org/packages" xmlns:wpkg="http://www.wpkg.org/wpkg" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.wpkg.org/packages ../xsd/packages.xsd" >
+
+<package 
+	id="GoogleEarth"
+	name="Google Earth 7.1.2.2041"
+	revision="%version%.1"
+	reboot="false"
+	priority="685">
+ 
+	<variable name="version" value="7.1.2.2041" />
+ 
+	<check type="uninstall" condition="exists" path="Google Earth" />
+ 
+	<install cmd='%COMSPEC% /C if not exist "%SystemDrive%\netinst\logs\" MD "%SystemDrive%\netinst\logs\"' />
+    <install cmd='msiexec /qb /l* %SystemDrive%\netinst\logs\googleearth.txt /i "%SOFTWARE%\googleearth\google earth.msi" ALLUSERS=1' />
+        
+    <upgrade include="install" />
+ 
+	<remove cmd="msiexec /qn /uninstall {4D2A6330-2F8B-11E3-9C40-B8AC6F97B88E}" />
+ 
+</package>
+
+</packages:packages>

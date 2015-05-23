@@ -1,0 +1,26 @@
+﻿<packages:packages xmlns:packages="http://www.wpkg.org/packages" 
+	xmlns:wpkg="http://www.wpkg.org/wpkg" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.wpkg.org/packages ../xsd/packages.xsd" >
+
+	<package 
+		id="flash_plugin"
+		name="Adobe Flash Player 17.0.0.169 NPAPI"
+		revision="%version%.1"
+		reboot="false"
+		priority="890">
+ 
+	<variable name="version" value="17.0.0.169" />
+	<variable name="verunin" value="17_0_0_169" />
+
+	<check type="uninstall" condition="versiongreaterorequal" path="Adobe Flash Player 17 NPAPI" value="%version%" />
+ 
+	<install cmd='msiexec /i %SOFTWARE%\adobe\install_flash_player_17_plugin.msi /qn' />
+ 
+        <upgrade include="install" />
+ 
+	<remove cmd='%COMSPEC% /C if exist "C:\Windows\SysWOW64\Macromed\Flash\FlashUtil32_%verunin%_Plugin.exe" "C:\Windows\SysWOW64\Macromed\Flash\FlashUtil32_%verunin%_Plugin.exe" -maintain plugin' />
+	<remove cmd='%COMSPEC% /C if exist "C:\Windows\System32\Macromed\Flash\FlashUtil32_%verunin%_Plugin.exe" "C:\Windows\System32\Macromed\Flash\FlashUtil32_%verunin%_Plugin.exe" -maintain plugin' />
+ 
+	</package>
+
+</packages:packages>

@@ -1,0 +1,35 @@
+<packages:packages xmlns:packages="http://www.wpkg.org/packages"
+	xmlns:wpkg="http://www.wpkg.org/wpkg" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.wpkg.org/packages ../xsd/packages.xsd">
+		
+	<package 
+		id="adobereader"
+		name="Adobe Acrobat Reader 11.0.10"
+		revision="%version%.1"
+		reboot="false"
+		priority="879">
+ 
+	<variable name="version" value="11.0.10" />
+	<variable name="versioncourt" value="11010" />
+
+	<check type="uninstall" condition="exists" path="Adobe Reader XI (%version%) - Français" />
+ 
+	<install cmd='%SOFTWARE%\adobe\AdbeRdr%versioncourt%_fr_FR.exe /sAll /rs' />
+	
+	<install cmd='%COMSPEC% /C if exist "%ALLUSERSPROFILE%\Bureau\Adobe Reader XI.lnk" del "%ALLUSERSPROFILE%\Bureau\Adobe Reader XI.lnk' />
+	
+	<!-- Desactive auto-update -->
+    <install cmd='%COMSPEC% /c REG ADD "HKLM\SOFTWARE\Adobe\Adobe ARM\1.0\ARM" /v "iCheck" /d "0" /t REG_DWORD /f' />
+	
+	<!-- Desactive les processus lances automatiquement -->
+    <install cmd='%COMSPEC% /c REG ADD "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v "Adobe ARM" /d "" /f' />
+    <install cmd='%COMSPEC% /c REG ADD "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v "Adobe Reader Speed Launcher" /d "" /f' />
+    <install cmd='%COMSPEC% /c REG ADD "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v "AdobeAAMUpdater-1.0" /d "" /f' />
+	
+		<upgrade include='install' />
+	
+	<remove cmd='msiexec /qn /x {AC76BA86-7AD7-1036-7B44-AB0000000001}' />
+
+	</package>
+  
+</packages:packages>
