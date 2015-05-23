@@ -5,21 +5,18 @@
 
 <package 
 	id="geogebra"
-	name="GeoGebra 5.0.50.0"
-	revision="%version%.3"
+	name="GeoGebra 5.0.114.0"
+	revision="%version%.9"
 	reboot="false"
 	priority="685">
  
-	<variable name="version" value="5.0.50.0" />
+	<variable name="version" value="5.0.114.0" />
 
 	<depends package-id="Java" />
  
 	<check type="uninstall" condition="versiongreaterorequal" path="GeoGebra 5" value="%version%" />
  	
-	<install cmd="msiexec /qn /x {D44FFF47-306C-4198-9899-832C1DAA4566}" />
 	<install cmd='msiexec /i %SOFTWARE%\GeoGebra_%version%.msi ALLUSERS=2 /qn' />
-<!--	<install architecture="x86" cmd='%ComSpec% /C copy "%SOFTWARE%\geogebra\GeoGebra.lnk" "%ALLUSERSPROFILE%\Bureau\GeoGebra.lnk" /Y' />
-	<install architecture="x64" cmd='%ComSpec% /C copy "%SOFTWARE%\geogebra\GeoGebra_7.lnk" "%ALLUSERSPROFILE%\Bureau\GeoGebra.lnk" /Y' /> -->
  
     <upgrade include="install" />
  
