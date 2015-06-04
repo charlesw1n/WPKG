@@ -4,12 +4,20 @@
 
 	<package 
 		id="flash_active_x"
+<<<<<<< HEAD:packages/Adobe_Flash_active_x.xml
 		name="Adobe Flash Player 17.0.0.188 ActiveX"
+=======
+		name="Adobe Flash Player 17.0.0.169 ActiveX"
+>>>>>>> origin/master:packages/Adobe_Flash_active_x.xml
 		revision="%version%.1"
 		reboot="false"
 		priority="895">
  
+<<<<<<< HEAD:packages/Adobe_Flash_active_x.xml
 	<variable name="version" value="17.0.0.188" />
+=======
+	<variable name="version" value="17.0.0.169" />
+>>>>>>> origin/master:packages/Adobe_Flash_active_x.xml
 	
 
 	<check type="uninstall" condition="versiongreaterorequal" path="Adobe Flash Player 17 ActiveX" value="%version%" />

@@ -18,9 +18,12 @@
 	<check type="uninstall" os="microsoft windows xp professionnel, , sp3, 5.1.2600" condition="exists" path="Java 7 Update %verj7%" />
 	
 <!-- Uninstall Java8 old version -->
+<<<<<<< HEAD
 	<install os="microsoft windows 7 professionnel, , sp1, 6.1.7601" cmd='msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F83218040F0}'>
       <exit code='any' />
 	</install>
+=======
+>>>>>>> origin/master
 	<install os="microsoft windows 7 professionnel, , sp1, 6.1.7601" cmd='msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F83218031F0}'>
       <exit code='any' />
 	</install>
