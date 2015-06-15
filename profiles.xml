@@ -29,35 +29,95 @@
 	<!--
 		Default set of software to be assigned to all hosts.
 	-->
-	<profile id="admin">
-	  <variable name="SOFTWARE" value="\\10.134.62.2\wpkg\software" />
-		<package package-id="Java7" />
+
+
+	<profile id="base">
+		<variable name="SOFTWARE" value="\\10.134.62.2\wpkg\software" />
+		<package package-id="Java" />
 		<package package-id="flash_active_x" />
 		<package package-id="flash_plugin" />
 		<package package-id="air" />
 		<package package-id="shockwave12" />
-		<package package-id="Firefox" />		
+		<package package-id="adobereaderdc" os="professional.+6\.1\.\d{4}" />
+		<package package-id="adobereader11" os="professional.+5\.1\.\d{4}" />
+		<package package-id="LibreOffice" />
+		<package package-id="Firefox" />	
+		<package package-id="VLC" />
+		<package package-id="OCS" />
+		<package package-id="Photofiltre" />
+		<package package-id="geogebra" />
+	</profile>
+	
+	<profile id="eps">
+		<variable name="SOFTWARE" value="\\10.134.62.2\wpkg\software" />
+		<package package-id="Java" />
+		<package package-id="flash_active_x" />
+		<package package-id="flash_plugin" />
+		<package package-id="air" />
+		<package package-id="shockwave12" />
+		<package package-id="adobereaderdc" os="professional.+6\.1\.\d{4}" />
+		<package package-id="adobereader11" os="professional.+5\.1\.\d{4}" />
+		<package package-id="Firefox" />	
+		<package package-id="VLC" />
+		<package package-id="OCS" />
+		<package package-id="Photofiltre" />
+	</profile>
+
+	<profile id="info">
+		<variable name="SOFTWARE" value="\\10.134.62.2\wpkg\software" />
+		<package package-id="Java" />
+		<package package-id="flash_active_x" />
+		<package package-id="flash_plugin" />
+		<package package-id="air" />
+		<package package-id="shockwave12" />
 		<package package-id="VLC" />
 		<package package-id="OCS" />
 	</profile>
 
-	<!--
-		Custom profile to be assigned to specific hosts only.
-		The profile depends on the default profile and therefore includes
-		packages from the default profile too.
-	-->
+	<profile id="admin">
+	  	<variable name="SOFTWARE" value="\\10.134.62.2\wpkg\software" />
+		<package package-id="Java" />
+		<package package-id="flash_active_x" />
+		<package package-id="flash_plugin" />
+		<package package-id="air" />
+		<package package-id="shockwave12" />
+		<package package-id="adobereaderdc" />
+		<package package-id="Firefox" />
+		<package package-id="Thunderbird" />
+		<package package-id="VLC" />
+		<package package-id="OCS" />
+	</profile>
+	
+	<profile id="adminlibro">
+	  	<variable name="SOFTWARE" value="\\10.134.62.2\wpkg\software" />
+		<package package-id="Java" />
+		<package package-id="flash_active_x" />
+		<package package-id="flash_plugin" />
+		<package package-id="air" />
+		<package package-id="shockwave12" />
+		<package package-id="adobereaderdc" os="professional.+6\.1\.\d{4}" />
+		<package package-id="adobereader11" os="professional.+5\.1\.\d{4}" />
+		<package package-id="Firefox" />
+		<package package-id="Thunderbird" />
+		<package package-id="LibreOffice" />
+		<package package-id="VLC" />
+		<package package-id="OCS" />
+	</profile>
+
 	<profile id="techno">
 		 <depends profile-id="base" />
 		 <variable name="SOFTWARE" value="\\10.134.62.2\wpkg\software" />
 		 <package package-id="sketchup" /> 
-		<!-- <package package-id="sweethome3d" /> -->
+		 <package package-id="sweethome3d" />
 	</profile>
+
 	
-	<!-- <profile id="histgeo">
+	<profile id="histgeo">
 		 <depends profile-id="base" />
 		 <variable name="SOFTWARE" value="\\10.134.62.2\wpkg\software" />
-		<package package-id="googleearth" />
-	</profile> -->
+		 <package package-id="GoogleEarth" />
+	</profile>
+
 
 	<profile id="math">
 		 <depends profile-id="base" />
@@ -66,59 +126,31 @@
 	</profile>
 
 
+	<profile id="artpla">
+		<variable name="SOFTWARE" value="\\10.134.62.2\wpkg\software" />
+		<depends profile-id="base" />
+		<package package-id="Photofiltre" />
+	</profile>
+
+
 	<profile id="test">
 		<variable name="SOFTWARE" value="\\10.134.62.2\wpkg\software" />
-		<package package-id="firefox_unattend" />
-		<package package-id="Java7" />
-		<package package-id="flash_active_x" />
-		<package package-id="flash_plugin" />
-		<package package-id="air" />
-		<!-- <package package-id="shockwave" /> -->
-		<package package-id="shockwave12" />
-		<package package-id="LibreOffice" />
-		<!-- <package package-id="Firefox" /> -->		
-		<package package-id="VLC" />
-		<package package-id="OCS" />
-	</profile>
-	
-	<profile id="test2">
-		 <depends profile-id="base" />
-		 <variable name="SOFTWARE" value="\\10.134.62.2\wpkg\software" />
-		<package package-id="adobereader" />
-	</profile>
-
-	<profile id="base">
-		<variable name="SOFTWARE" value="\\10.134.62.2\wpkg\software" />
-		<package package-id="Java7" />
+		<package package-id="Java" />
 		<package package-id="flash_active_x" />
 		<package package-id="flash_plugin" />
 		<package package-id="air" />
 		<package package-id="shockwave12" />
-		<package package-id="adobereader" />
-		<package package-id="LibreOffice" />
-		<package package-id="Firefox" />		
+		<package package-id="adobereaderdc" />
+		<package package-id="Firefox" />	
 		<package package-id="VLC" />
 		<package package-id="OCS" />
-	</profile>
-	
-	<!--
-		Custom profile to be assigned to hosts in administration department.
-		The profile depends on the default profile and therefore includes
-		packages from the default profile too.
-	-->
-	<profile id="administration">
-		<depends profile-id="default" />
-		<package package-id="openoffice" />
-		<package package-id="acrobat7" />
+		<package package-id="geogebra" />
+		<package package-id="sketchup" /> 
+		<package package-id="sweethome3d" />
+		<package package-id="Thunderbird" />
+
 	</profile>
 
-	<!--
-		Custom profile to all remaining hosts.
-		The profile depends on the default profile and therefore includes
-		packages from the default profile too.
-	-->
-	<profile id="other">
-		<depends profile-id="default" />
-		<!-- <package package-id="openoffice" /> -->
-	</profile>
+	
+
 </profiles:profiles>
