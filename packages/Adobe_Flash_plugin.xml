@@ -4,22 +4,13 @@
 
 	<package 
 		id="flash_plugin"
-<<<<<<< HEAD:packages/Adobe_Flash_plugin.xml
 		name="Adobe Flash Player 17.0.0.188 NPAPI"
-=======
-		name="Adobe Flash Player 17.0.0.169 NPAPI"
->>>>>>> origin/master:packages/Adobe_Flash_plugin.xml
 		revision="%version%.1"
 		reboot="false"
 		priority="890">
  
-<<<<<<< HEAD:packages/Adobe_Flash_plugin.xml
 	<variable name="version" value="17.0.0.188" />
 	<variable name="verunin" value="17_0_0_188" />
-=======
-	<variable name="version" value="17.0.0.169" />
-	<variable name="verunin" value="17_0_0_169" />
->>>>>>> origin/master:packages/Adobe_Flash_plugin.xml
 
 	<check type="uninstall" condition="versiongreaterorequal" path="Adobe Flash Player 17 NPAPI" value="%version%" />
  

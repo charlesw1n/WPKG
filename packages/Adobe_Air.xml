@@ -4,20 +4,12 @@
 
 	<package 
 		id="air"
-<<<<<<< HEAD:packages/Adobe_Air.xml
 		name="Adobe AIR 17.0.0.172"
-=======
-		name="Adobe AIR 17.0.0.144"
->>>>>>> origin/master:packages/Adobe_Air.xml
 		revision="%version%.1"
 		reboot="false"
 		priority="885">
  
-<<<<<<< HEAD:packages/Adobe_Air.xml
 	<variable name="version" value="17.0.0.172" />
-=======
-	<variable name="version" value="17.0.0.144" />
->>>>>>> origin/master:packages/Adobe_Air.xml
 	<variable name="pfiles" value="C:\Program Files (x86)" />
 	<variable name="pfiles" value="C:\Program Files" />
  
