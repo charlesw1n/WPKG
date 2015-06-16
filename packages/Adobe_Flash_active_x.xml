@@ -4,17 +4,17 @@
 
 	<package 
 		id="flash_active_x"
-		name="Adobe Flash Player 17.0.0.188 ActiveX"
+		name="Adobe Flash Player 18.0.0.160 ActiveX"
 		revision="%version%.1"
 		reboot="false"
 		priority="895">
  
-	<variable name="version" value="17.0.0.188" />
+	<variable name="version" value="18.0.0.160" />
 	
 
-	<check type="uninstall" condition="versiongreaterorequal" path="Adobe Flash Player 17 ActiveX" value="%version%" />
+	<check type="uninstall" condition="versiongreaterorequal" path="Adobe Flash Player 18 ActiveX" value="%version%" />
  
-	<install cmd='msiexec /i %SOFTWARE%\adobe\install_flash_player_17_active_x.msi' />
+	<install cmd='msiexec /i %SOFTWARE%\adobe\install_flash_player_18_active_x.msi' />
  
         <upgrade include="install" />
  

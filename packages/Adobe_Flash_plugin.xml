@@ -4,17 +4,17 @@
 
 	<package 
 		id="flash_plugin"
-		name="Adobe Flash Player 17.0.0.188 NPAPI"
+		name="Adobe Flash Player 18.0.0.160 NPAPI"
 		revision="%version%.1"
 		reboot="false"
 		priority="890">
  
-	<variable name="version" value="17.0.0.188" />
-	<variable name="verunin" value="17_0_0_188" />
+	<variable name="version" value="17.0.0.160" />
+	<variable name="verunin" value="17_0_0_160" />
 
-	<check type="uninstall" condition="versiongreaterorequal" path="Adobe Flash Player 17 NPAPI" value="%version%" />
+	<check type="uninstall" condition="versiongreaterorequal" path="Adobe Flash Player 18 NPAPI" value="%version%" />
  
-	<install cmd='msiexec /i %SOFTWARE%\adobe\install_flash_player_17_plugin.msi /qn' />
+	<install cmd='msiexec /i %SOFTWARE%\adobe\install_flash_player_18_plugin.msi /qn' />
  
         <upgrade include="install" />
  
