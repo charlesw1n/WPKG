@@ -15,7 +15,7 @@ MOZILLA :
 - Thunderbird : http://www.mozilla.org/products/thunderbird
 
 
-GeoGebra : http://download.geogebra.org/installers/
+GeoGebra : http://download.geogebra.org/installers/5.0/
 
 VLC : http://www.videolan.org
 
