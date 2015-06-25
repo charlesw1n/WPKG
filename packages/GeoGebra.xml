@@ -5,12 +5,12 @@
 
 <package 
 	id="geogebra"
-	name="GeoGebra 5.0.114.0"
+	name="GeoGebra 5.0.128.0"
 	revision="%version%.10"
 	reboot="false"
 	priority="685">
  
-	<variable name="version" value="5.0.114.0" />
+	<variable name="version" value="5.0.128.0" />
 
 	<depends package-id="Java" />
  
