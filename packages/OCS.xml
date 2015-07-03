@@ -4,16 +4,16 @@
 
 	<package 
 		id="OCS"
-		name="OCS Inventory NG Agent 2.0.0.20"
-		revision="%version%"
+		name="OCS Inventory NG Agent 2.1.1.1"
+		revision="%version%.2"
 		reboot="false"
 		priority="5">
  
-	<variable name="version" value="2.0.0.20" />
+	<variable name="version" value="2.1.1.1" />
  
 	<check type="uninstall" condition="exists" path="OCS Inventory NG Agent %version%" />
  
-	<install cmd='%SOFTWARE%\OCS_%version%.exe' />
+	<install cmd='%SOFTWARE%\OCS-NG-Windows-Agent-Setup.exe /server=http://%ocsserver%/ocsinventory /ssl=0 /proxy=0 /force /S /NOSPLASH' />
  
         <upgrade include="install" />
  
