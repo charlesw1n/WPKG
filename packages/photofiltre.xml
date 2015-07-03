@@ -4,19 +4,19 @@
 
 	<package 
 		id="Photofiltre"
-		name="Photofiltre 7.1.2"
+		name="Photofiltre 7.2.1"
 		revision="%version%.1"
 		reboot="false"
 		priority="884">
  
-	<variable name="version" value="7.1.2" />
+	<variable name="version" value="7.2.1" />
 	<variable name="pfile" value="%programfiles(x86)%" architecture="x64" />
 
 	<variable name="pfile" value="%programfiles%" architecture="x86" />
  
 	<check type="file" condition="versiongreaterorequal" path="%pfile%\photofiltre 7\PhotoFiltre7.exe" value="%version%" />
  
-	<install cmd="%SOFTWARE%\pf7-setup-fr.exe /S" />
+	<install cmd="%SOFTWARE%\pf7-setup-fr-%version%.exe /S" />
  
         <upgrade include="install" />
  
