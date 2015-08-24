@@ -4,14 +4,12 @@
 
 	<package 
 		id="air"
-		name="Adobe AIR 18.0.0.144"
+		name="Adobe AIR 18.0.0.199"
 		revision="%version%.1"
 		reboot="false"
 		priority="885">
  
-	<variable name="version" value="18.0.0.144" />
-	<variable name="pfiles" value="C:\Program Files (x86)" />
-	<variable name="pfiles" value="C:\Program Files" />
+	<variable name="version" value="18.0.0.199" />
  
 	<check type="uninstall" condition="versiongreaterorequal" path="Adobe AIR" value="%version%" />
  
