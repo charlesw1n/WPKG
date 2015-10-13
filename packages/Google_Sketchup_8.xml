@@ -1,0 +1,24 @@
+<packages:packages xmlns:packages="http://www.wpkg.org/packages"
+	xmlns:wpkg="http://www.wpkg.org/wpkg" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.wpkg.org/packages ../xsd/packages.xsd">
+		
+	<package        
+		id="sketchup8"        
+		name="Google SketchUp 8"
+		revision="%version%.1"        
+		reboot="false"        
+		priority="10">
+
+	<variable name="version" value="8" />
+
+	<check type="uninstall" condition="exists" path="SketchUp %version%" />
+
+	<install cmd='msiexec /qn /i %SOFTWARE%\GoogleSketchUp%version%.msi' />
+
+		<upgrade  include="install" />
+
+	<remove cmd='msiexec.exe /qn /uninstall {00280C97-E028-4563-8435-2BCA2786D03F}' />
+
+	</package>
+
+</packages:packages>
