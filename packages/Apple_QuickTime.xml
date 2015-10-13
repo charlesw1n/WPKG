@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<packages:packages
+        xmlns:packages="http://www.wpkg.org/packages" xmlns:wpkg="http://www.wpkg.org/wpkg" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.wpkg.org/packages ../xsd/packages.xsd" >
+
+<package
+   id="quicktime"
+   name="QuickTime 7.78.80.95"
+   revision="%version%.1"
+   reboot="false"
+   priority="0">
+ 
+ <depends package-id="appleapplicationsupport" />
+ 
+ <variable name="version" value="7.78.80.95" />
+ 
+ <check type="uninstall" condition="versiongreaterorequal" path="QuickTime 7" value="%version%" />
+ 
+ <install cmd='msiexec /qn /i "%SOFTWARE%\apple\QuickTime.msi" DESKTOP_SHORTCUTS=0 QT_TRAY_ICON=0 SCHEDULE_ASUW=0'>
+   <exit code="0" />
+   <exit code="3010" />
+ </install>
+ 
+ <remove cmd='msiexec /qn /x "%SOFTWARE%\apple\QuickTime.msi"'>
+   <exit code="any" />
+ </remove>
+ 
+ <upgrade include="install" />
+ <downgrade include="install" />
+ 
+</package>
+
+</packages:packages>
