@@ -4,22 +4,24 @@
 
 	<package 
 		id="flash_active_x"
-		name="Adobe Flash Player 18.0.0.194 ActiveX"
+		name="Adobe Flash Player 19.0.0.207 ActiveX"
 		revision="%version%.1"
 		reboot="false"
 		priority="895">
  
-	<variable name="version" value="18.0.0.194" />
-	<variable name="verunin" value="18_0_0_194" />
+	<variable name="version" value="19.0.0.207" />
+	<variable name="verunin" value="19_0_0_207" />
 
-	<check type="uninstall" condition="versiongreaterorequal" path="Adobe Flash Player 18 ActiveX" value="%version%" />
+	<check type="uninstall" condition="versiongreaterorequal" path="Adobe Flash Player 19 ActiveX" value="%version%" />
  
-	<install cmd='msiexec /i %SOFTWARE%\adobe\install_flash_player_18_active_x.msi' />
+	<install cmd='MsiExec.exe /X {A4488E5C-1022-432A-8066-72E1C4023310} /qn'>
+		<exit code='any' />
+	</install>
+	<install cmd='msiexec /i %SOFTWARE%\adobe\install_flash_player_19_active_x.msi /qn' />
  
         <upgrade include="install" />
  
-	<remove cmd='%COMSPEC% /C if exist "%sys64%\Macromed\Flash\FlashUtil32_%verunin%_ActiveX.exe" "%sys64%\Macromed\Flash\FlashUtil32_%verunin%_ActiveX.exe" -maintain activex' />
-	<remove cmd='%COMSPEC% /C if exist "%sys32%\Macromed\Flash\FlashUtil32_%verunin%_ActiveX.exe" "%sys32%\Macromed\Flash\FlashUtil32_%verunin%_ActiveX.exe" -maintain activex' />
+	<remove cmd='MsiExec.exe /X{FDAF247B-4ADD-4089-A799-B08206B8E75C} /qn' />
  
 	</package>
 
