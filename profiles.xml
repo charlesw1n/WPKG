@@ -32,31 +32,30 @@
 
 
 	<profile id="base">
-		<variable name="SOFTWARE" value="\\10.134.62.2\wpkg\software" />
 		<package package-id="Java" />
 		<package package-id="flash_active_x" />
 		<package package-id="flash_plugin" />
 		<package package-id="air" />
 		<package package-id="shockwave12" />
-		<package package-id="adobereaderdc" os="professional.+6\.1\.\d{4}" />
-		<package package-id="adobereader11" os="professional.+5\.1\.\d{4}" />
+		<package package-id="adobereaderdc" os="microsoft windows 7 professionnel, , sp1, 6.1.7601" />
+		<package package-id="adobereader11" os="microsoft windows xp professionnel, , sp3, 5.1.2600" />
 		<package package-id="LibreOffice" />
 		<package package-id="Firefox" />	
 		<package package-id="VLC" />
 		<package package-id="OCS" />
 		<package package-id="Photofiltre" />
 		<package package-id="geogebra" />
+		<package package-id="quicktime" />
 	</profile>
 	
 	<profile id="eps">
-		<variable name="SOFTWARE" value="\\10.134.62.2\wpkg\software" />
 		<package package-id="Java" />
 		<package package-id="flash_active_x" />
 		<package package-id="flash_plugin" />
 		<package package-id="air" />
 		<package package-id="shockwave12" />
-		<package package-id="adobereaderdc" os="professional.+6\.1\.\d{4}" />
-		<package package-id="adobereader11" os="professional.+5\.1\.\d{4}" />
+		<package package-id="adobereaderdc" os="microsoft windows 7 professionnel, , sp1, 6.1.7601" />
+		<package package-id="adobereader11" os="microsoft windows xp professionnel, , sp3, 5.1.2600" />
 		<package package-id="Firefox" />	
 		<package package-id="VLC" />
 		<package package-id="OCS" />
@@ -64,7 +63,6 @@
 	</profile>
 
 	<profile id="info">
-		<variable name="SOFTWARE" value="\\10.134.62.2\wpkg\software" />
 		<package package-id="Java" />
 		<package package-id="flash_active_x" />
 		<package package-id="flash_plugin" />
@@ -75,13 +73,13 @@
 	</profile>
 
 	<profile id="admin">
-	  	<variable name="SOFTWARE" value="\\10.134.62.2\wpkg\software" />
 		<package package-id="Java" />
 		<package package-id="flash_active_x" />
 		<package package-id="flash_plugin" />
 		<package package-id="air" />
 		<package package-id="shockwave12" />
-		<package package-id="adobereaderdc" />
+		<package package-id="adobereaderdc" os="microsoft windows 7 professionnel, , sp1, 6.1.7601" />
+		<package package-id="adobereader11" os="microsoft windows xp professionnel, , sp3, 5.1.2600" />
 		<package package-id="Firefox" />
 		<package package-id="Thunderbird" />
 		<package package-id="VLC" />
@@ -89,14 +87,13 @@
 	</profile>
 	
 	<profile id="adminlibro">
-	  	<variable name="SOFTWARE" value="\\10.134.62.2\wpkg\software" />
 		<package package-id="Java" />
 		<package package-id="flash_active_x" />
 		<package package-id="flash_plugin" />
 		<package package-id="air" />
 		<package package-id="shockwave12" />
-		<package package-id="adobereaderdc" os="professional.+6\.1\.\d{4}" />
-		<package package-id="adobereader11" os="professional.+5\.1\.\d{4}" />
+		<package package-id="adobereaderdc" os="microsoft windows 7 professionnel, , sp1, 6.1.7601" />
+		<package package-id="adobereader11" os="microsoft windows xp professionnel, , sp3, 5.1.2600" />
 		<package package-id="Firefox" />
 		<package package-id="Thunderbird" />
 		<package package-id="LibreOffice" />
@@ -106,7 +103,6 @@
 
 	<profile id="techno">
 		 <depends profile-id="base" />
-		 <variable name="SOFTWARE" value="\\10.134.62.2\wpkg\software" />
 		 <package package-id="sketchup" /> 
 		 <package package-id="sweethome3d" />
 	</profile>
@@ -114,27 +110,23 @@
 	
 	<profile id="histgeo">
 		 <depends profile-id="base" />
-		 <variable name="SOFTWARE" value="\\10.134.62.2\wpkg\software" />
 		 <package package-id="GoogleEarth" />
 	</profile>
 
 
 	<profile id="math">
 		 <depends profile-id="base" />
-		 <variable name="SOFTWARE" value="\\10.134.62.2\wpkg\software" />
 		<package package-id="geogebra" />
 	</profile>
 
 
 	<profile id="artpla">
-		<variable name="SOFTWARE" value="\\10.134.62.2\wpkg\software" />
 		<depends profile-id="base" />
 		<package package-id="Photofiltre" />
 	</profile>
 
 
 	<profile id="test">
-		<variable name="SOFTWARE" value="\\10.134.62.2\wpkg\software" />
 		<package package-id="Java" />
 		<package package-id="flash_active_x" />
 		<package package-id="flash_plugin" />
@@ -151,6 +143,5 @@
 
 	</profile>
 
-	
 
 </profiles:profiles>

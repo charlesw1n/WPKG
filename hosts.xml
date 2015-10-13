@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 
 <!--
 	Lists host names and associated profile. This file can be edited directly,
@@ -28,24 +28,55 @@
 		to this host.
 	-->
 	
-	<host name="310_ANGL" profile-id="test2" />
+	<!-- <host name="201_04" profile-id="test" /> 
 	
+	-->
+	<!-- Histoire Géo -->
+	
+	<host name="HG.+" profile-id="histgeo" />
+	
+	<!-- EPS + PORT_ADM-->
+	
+	<host name="EPS.+" profile-id="eps" />
+	<host name="PORT_ADM" profile-id="eps" />
+
+	<!-- Informatique -->
+
+	<host name="INFO_.+" profile-id="info" />
+
 	<!-- Administration -->
 	
 	<host name="CUISINE" profile-id="admin" />
-	<host name="PR.+" profile-id="admin" />
+	<host name="PRI" profile-id="admin" />
+	<host name="PRA" profile-id="admin" />
 	<host name="SA_.+" profile-id="admin" />
+	<host name="INT_.+" profile-id="admin" />
+	<host name="SI.+" profile-id="admin" />
+	<host name="CPE.+" profile-id="admin" />
+	<host name="VIESCO" profile-id="admin" />
+	<host name="scolarite" profile-id="admin" />
+	<host name="ACCUEIL" profile-id="admin" />
+	<host name="INF" profile-id="adminlibro" />
+	<host name="secretariat" profile-id="admin" />
+	<host name="PLT-ADM-.+" profile-id="admin" />
 	
 	<!-- Maths -->
-	
+	<!--
 	<host name="ULIS_.+" profile-id="math" />
 	<host name="105_MATHS" profile-id="math" />
 	<host name="210_MATH" profile-id="math" />
+	<host name=".+_MATH" profile-id="math" />
 	<host name=".+_MATHS" profile-id="math" />
+	-->
 	
 	<!-- Techno -->
 	
 	<host name="PC_ALAIN.+" profile-id="techno" />
+	<host name="0tech_.+" profile-id="techno" />
+	<host name="1tech_.+" profile-id="techno" />
+	<host name="2tech_.+" profile-id="techno" />
+	<host name="3tech_.+" profile-id="techno" />
+	<host name="AP_.+" profile-id="techno" />
 
 	<!--
 		This specification uses a regular expression for host name matching.
