@@ -6,13 +6,12 @@ ADOBE :
 
 
 ORACLE :
-- Java 7 : http://java.com/fr/download/manual_java7.jsp (/!\ Only until April 2015)
 - Java 8 : http://java.com/fr/download/manual.jsp
 
 
 MOZILLA :
-- Firefox : http://www.mozilla.org/products/firefox
-- Thunderbird : http://www.mozilla.org/products/thunderbird
+- Firefox : https://www.mozilla.org/en-US/firefox/all/#fr
+- Thunderbird : https://www.mozilla.org/en-US/thunderbird/all/#fr
 
 
 GeoGebra : http://download.geogebra.org/installers/5.0/
@@ -20,3 +19,5 @@ GeoGebra : http://download.geogebra.org/installers/5.0/
 VLC : http://www.videolan.org
 
 LibreOffice : http://www.libreoffice.org/download
+
+SweetHome3D : http://sourceforge.net/projects/sweethome3d/files/SweetHome3D/
