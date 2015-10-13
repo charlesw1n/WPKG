@@ -4,14 +4,14 @@
 
 	<package 
 		id="shockwave12"
-		name="Adobe Shockwave Player 12.1.7.157"
-		revision="%version%.2"
+		name="Adobe Shockwave Player 12.2.0.162"
+		revision="%version%.1"
 		reboot="false"
 		priority="881">
  
-	<variable name="version" value="12.1.7.157" />
+	<variable name="version" value="12.2.0.162" />
  
-	<check type="uninstall" condition="versiongreaterorequal" path="Adobe Shockwave Player 12.1" value="%version%" />
+	<check type="uninstall" condition="versiongreaterorequal" path="Adobe Shockwave Player 12.2" value="%version%" />
  
 	<install cmd='msiexec /i %SOFTWARE%\adobe\sw_lic_full_installer.msi /qn' />
  
