@@ -568,7 +568,7 @@
 		****************************************************************************
 	-->
 
-		<param name='log_file_path' value='%TEMP%' />
+		<param name='log_file_path' value='\\\\10.134.62.2\\wpkg\\logs' />
 
 
 
@@ -602,7 +602,7 @@
 		****************************************************************************
 	-->
 
-		<param name='logfilePattern' value='wpkg-[HOSTNAME].log' />
+		<param name='logfilePattern' value='[HOSTNAME].log' />
 
 
 
@@ -713,14 +713,22 @@
 		****************************************************************************
 		****************************************************************************
 	-->
-	<!--
+	
 		<variables>
-			<variable name="PROG_FILES32" value="%PROGRAMFILES%\SomeSoftware" architecture="x86" />
-			<variable name="PROG_FILES32" value="%PROGRAMFILES(x86)%\SomeSoftware" architecture="x64" />
-			<variable name="DESKTOP" value="%ALLUSERSPROFILE%\Desktop" os="windows xp" />
-			<variable name="DESKTOP" value="%PUBLIC%\Desktop" os="windows 7" />
+			<variable name="PROGFILES32" architecture="x86" value="%PROGRAMFILES%"  />
+			<variable name="PROGFILES32" architecture="x64" value="%PROGRAMFILES(x86)%"  />
+			
+			<variable name="DESKTOP" value="%ALLUSERSPROFILE%\Desktop" os="microsoft windows xp professionnel, , sp3, 5.1.2600" />
+			<variable name="DESKTOP" value="%PUBLIC%\Desktop" os="microsoft windows 7 professionnel, , sp1, 6.1.7601" />
+			
+			<variable name="ocsserver" value="10.234.62.4:6000" />
+			
+			<variable name="SOFTWARE" value="\\10.134.62.2\wpkg\software" />
+			
+			<variable name="sys64" value="C:\Windows\SysWOW64" />
+			<variable name="sys32" value="C:\Windows\System32" />
 		</variables>
-	-->
+	
 
 	<!--
 		****************************************************************************
