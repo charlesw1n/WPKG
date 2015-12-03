@@ -5,12 +5,12 @@
 
 <package 
 	id="sweethome3d"
-	name="SweetHome 3D 4.6"
-	revision="%version%.5"
+	name="SweetHome 3D 5.1"
+	revision="%version%.1"
 	reboot="false"
 	priority="11">
  
-	<variable name="version" value="4.6" />
+	<variable name="version" value="5.1" />
 
 	<check type="uninstall" condition="exists" path="Sweet Home 3D version %version%" />
 
