@@ -4,20 +4,23 @@
 
     <package
         id="Java"
-        name="Java 8.60 (Win7) / Java 7.80 (WinXP)"
-        revision="1.%verMaj%.%verj8%.2"
+        name="Java 8.66 (Win7) / Java 7.80 (WinXP)"
+        revision="2.%verMaj%.%verj8%.3"
         reboot="false"
         priority="901">
 
 	<variable name="verMaj" value="8" />
 
-	<variable name="verj8" value="60" />
+	<variable name="verj8" value="66" />
 	<variable name="verj7" value="80" />
 
 	<check type="uninstall" os="microsoft windows 7 professionnel, , sp1, 6.1.7601" condition="exists" path="Java 8 Update %verj8%" />
 	<check type="uninstall" os="microsoft windows xp professionnel, , sp3, 5.1.2600" condition="exists" path="Java 7 Update %verj7%" />
 	
 <!-- Uninstall Java8 old version -->
+	<install os="microsoft windows 7 professionnel, , sp1, 6.1.7601" cmd='msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F83218060F0}'>
+      <exit code='any' />
+	</install>
 	<install os="microsoft windows 7 professionnel, , sp1, 6.1.7601" cmd='msiexec /qn /x {26A24AE4-039D-4CA4-87B4-2F83218045F0}'>
       <exit code='any' />
 	</install>
