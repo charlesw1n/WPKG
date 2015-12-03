@@ -1,5 +1,5 @@
 ADOBE :
-- Flash : http://www.adobe.com/products/flashplayer/fp_distribution3.html
+- Flash : http://www.adobe.com/products/flashplayer/distribution4.html?auth=dbc100be-6117-47df-b7aa-8022793030f9
 - AIR : http://www.adobe.com/products/air/runtime-distribution3.html
 - Reader : ftp://ftp.adobe.com/pub/adobe/reader/win/AcrobatDC/
 - Shockwave : http://www.adobe.com/products/shockwaveplayer/shwv_distribution3.html
