@@ -4,13 +4,13 @@
 
 	<package 
 		id="flash_plugin"
-		name="Adobe Flash Player 19.0.0.207 NPAPI"
+		name="Adobe Flash Player 19.0.0.245 NPAPI"
 		revision="%version%.1"
 		reboot="false"
 		priority="890">
  
-	<variable name="version" value="19.0.0.207" />
-	<variable name="verunin" value="19_0_0_207" />
+	<variable name="version" value="19.0.0.245" />
+	<variable name="verunin" value="19_0_0_245" />
 
 	<check type="uninstall" condition="versiongreaterorequal" path="Adobe Flash Player 19 NPAPI" value="%version%" />
  
