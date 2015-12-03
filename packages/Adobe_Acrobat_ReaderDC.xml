@@ -16,7 +16,7 @@
  
 	<install cmd='%SOFTWARE%\adobe\AcroRdrDC%versioncourt%_fr_FR.exe EULA_ACCEPT=YES' />
 	
-	<install cmd='%COMSPEC% /C if exist "%public%\desktop\Acrobat Reader DC.lnk" del "%public%\desktop\Acrobat Reader DC.lnk' />
+	<install cmd='%COMSPEC% /C if exist "%public%\desktop\Acrobat Reader DC.lnk" del "%public%\desktop\Acrobat Reader DC.lnk"' />
 	
 	<!-- Desactive auto-update -->
 <!--    <install cmd='%COMSPEC% /c REG ADD "HKLM\SOFTWARE\Adobe\Adobe ARM\1.0\ARM" /v "iCheck" /d "0" /t REG_DWORD /f' /> -->
