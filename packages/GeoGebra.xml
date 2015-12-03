@@ -5,19 +5,21 @@
 
 <package 
 	id="geogebra"
-	name="GeoGebra 5.0.143.0"
-	revision="%version%.10"
+	name="GeoGebra 5.0.174.0"
+	revision="%version%.1"
 	reboot="false"
 	priority="685">
  
-	<variable name="version" value="5.0.143.0" />
-	<variable name="verfile" value="5-0-143-0" />
+	<variable name="version" value="5.0.174.0" />
+	<variable name="verfile" value="5-0-174-0" />
 
 	<depends package-id="Java" />
  
 	<check type="uninstall" condition="versiongreaterorequal" path="GeoGebra 5" value="%version%" />
  	
-	<install cmd='msiexec /x {D44FFF47-306C-4198-9899-832C1DAA4566} /qn' />
+	<install cmd='msiexec /x {D44FFF47-306C-4198-9899-832C1DAA4566} /qn'>
+		<exit code='any' />
+	</install>
 	<install cmd='msiexec /i %SOFTWARE%\GeoGebra-Windows-Installer-%verfile%.msi ALLUSERS=2 /qn' />
  
 	<upgrade include="install" />
