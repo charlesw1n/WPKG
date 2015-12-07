@@ -21,3 +21,5 @@ VLC : http://www.videolan.org
 LibreOffice : http://www.libreoffice.org/download
 
 SweetHome3D : http://sourceforge.net/projects/sweethome3d/files/SweetHome3D/
+
+SketchUp : http://www.sketchup.com/download?sketchup=edu
