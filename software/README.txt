@@ -22,4 +22,4 @@ LibreOffice : http://www.libreoffice.org/download
 
 SweetHome3D : http://sourceforge.net/projects/sweethome3d/files/SweetHome3D/
 
-SketchUp : http://www.sketchup.com/download?sketchup=edu
+SketchUp : http://www.sketchup.com/fr/download?sketchup=edu
