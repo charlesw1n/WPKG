@@ -1,0 +1,24 @@
+<Configuration>
+
+  <Add SourcePath="\\10.134.62.2\Office365\" OfficeClientEdition="32" >
+    <Product ID="O365ProPlusRetail">
+      <Language ID="fr-fr" />
+      <ExcludeApp ID="OneNote"/>
+      <ExcludeApp ID="Project"/>
+      <ExcludeApp ID="SharePointDesigner"/>
+      <ExcludeApp ID="Access"/>
+    </Product>
+<!--    <Product ID="VisioProRetail"> 
+      <Language ID="fr-fr" />
+    </Product> -->
+  </Add>
+
+  <Updates Enabled="TRUE" UpdatePath="\\10.134.62.2\Office365\" />
+
+  <Display Level="None" AcceptEULA="TRUE" />
+
+  <Logging Name="%computername%_Office.log" Path="\\10.134.62.2\Office365\InstallLogs\" />
+
+  <Property Name="AUTOACTIVATE" Value="1" />
+
+</Configuration>
