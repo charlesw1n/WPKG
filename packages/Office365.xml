@@ -1,0 +1,25 @@
+﻿<packages:packages xmlns:packages="http://www.wpkg.org/packages"
+	xmlns:wpkg="http://www.wpkg.org/wpkg" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.wpkg.org/packages ../xsd/packages.xsd" >
+
+	<package 
+		id="office365"
+		name="Office 365 ProPlus 2016"
+		revision="%version%.1"
+		reboot="false"
+		priority="200">
+ 
+	<variable name="version" value="16.0.4229.1024" />
+ 
+	<check type="uninstall" condition="versiongreaterorequal" path="Microsoft Office 365 ProPlus - fr-fr" value="%version%" />
+ 
+	<install architecture="x64" cmd="\\10.134.62.2\Office365\setup.exe /configure \\10.134.62.2\Office365\x64.xml" />
+	<install architecture="x86" cmd="\\10.134.62.2\Office365\setup.exe /configure \\10.134.62.2\Office365\x86.xml" />
+ 
+        <upgrade include="install" />
+ 
+	<remove cmd="\\10.134.62.2\Office365\setup.exe /configure \\10.134.62.2\Office365\uninstall.xml" />
+	 
+	</package>
+
+</packages:packages>
