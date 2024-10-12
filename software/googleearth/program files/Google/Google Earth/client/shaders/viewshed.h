@@ -10,7 +10,7 @@ varying highp vec3 viewshedDir;
 varying highp float viewshedLen;
 
 // Maximum world space radius of viewshed in fraction of Earth radius.
-// Currently, kMaxWorldSpaceLength = 10000m / kWGS84Radius
+// Currently, kMaxWorldSpaceLength = 50000m / kWGS84Radius
 // See earth/client/libs/math/units.cc
 #define kMaxWorldSpaceLength 0.0015678559
 // Offset in distance to reduce shadow acne.
